@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, amsthm}
-\newtheorem{problem}{Problem}
+\newtheorem*{problem}{Problem}
 \newtheorem*{solution}{Solution}
 \title{Chapter 1 Section 1}
 \author{Andrew Taylor}
@@ -183,6 +183,116 @@ Thus the yield for one bundle of inferior rice is 2.75 dou. The yield for one bu
 \end{solution}
 
 \begin{problem}
+The sums of any two of three real numbers are 24, 28, and 30. Find these three numbers.
 \end{problem}
+
+\begin{solution}
+This gives us the equations
+
+\begin{align*}
+x + y &= 24 \\
+x + z &= 28 \\
+y + z &= 30
+\end{align*}
+
+We can write this system using matrices.
+
+\begin{align*}
+\begin{pmatrix}
+1 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+24 \\ 28 \\ 30
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 1 & 0 \\
+0 & -1 & 1 \\
+0 & 1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+24 \\ 4 \\ 30
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 1 & 0 \\
+0 & -1 & 1 \\
+0 & 0 & 2
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+24 \\ 4 \\ 34
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 1 & 0 \\
+0 & -1 & 1 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+24 \\ 4 \\ 17
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 1 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+24 \\ -13 \\ 17
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+11 \\ -13 \\ 17
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y \\ z 
+\end{pmatrix}
+&= 
+\begin{pmatrix}
+11 \\ 13 \\ 17
+\end{pmatrix}
+\end{align*}
+
+Thus we have $x = 11$, $y = 13$, $z = 17$.
+
+\end{solution}
+
+\begin{problem}
+Emile and Gertrude are brother and sister. Emile has twice as many sisters as brothers, and Gertrude has just as many brothers as sisters. How many children are there in this family?
+\end{problem}
+
+\begin{solution}
+\end{solution}
 
 \end{document}

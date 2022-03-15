@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\title{Chapter 1 Section 1}
+\author{Andrew Taylor}
+\date{March 14 2022}
+\begin{document}
+\maketitle
+
+\begin{problem}
+The yield of one bundle of inferior rice, two bundles of medium-grade rice, and three bundles of superior rice is 39 dou of grain. The yield of one bundle of inferior rice, three bundles of medium-grade rice, and two bundles of superior rice is 34 dou. The yield of three bundles of inferior rice, two bundles of medium-grade rice, and one bundle of superior rice is 26 dou. What is the yield of one bundle of each grade of rice?
+\end{problem}
+
+\begin{solution}
+We can turn this information into an equation involving matrices.
+
+\begin{equation*}
+\begin{pmatrix}
+1 & 2 & 3 \\
+1 & 3 & 2 \\
+3 & 2 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+=
+\begin{pmatrix}
+39 \\
+34 \\
+26
+\end{pmatrix}
+\end{equation*} \\
+
+Let's get the determinant of the coefficients matrix.
+
+\begin{align*}
+\begin{vmatrix}
+1 & 2 & 3 \\
+1 & 3 & 2 \\
+3 & 2 & 1
+\end{vmatrix}
+&= 
+1 \begin{vmatrix}3 & 2 \\ 2 & 1\end{vmatrix} 
+- 2 \begin{vmatrix} 1 & 2 \\ 3 & 1\end{vmatrix}
++ 3 \begin{vmatrix}1 & 3 \\ 3 & 2\end{vmatrix} \\
+&= 1 * (3 - 4) - 2 * (1 - 6) + 3 * (2 - 9) \\
+&= -1 + 10 - 21 \\
+&= -12
+\end{align*}
+\\
+The determinant is nonzero, so the equation has a solution.
+\\
+\\
+Now we can do some row operations to get the identity matrix on the left.
+
+\begin{align*}
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 1 & -1 \\
+3 & 2 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+39 \\
+-5 \\
+26
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 1 & -1 \\
+0 & -4 & -8
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+39 \\
+-5 \\
+-91
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 1 & -1 \\
+0 & 0 & -12
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+39 \\
+-5 \\
+-111
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 1 & -1 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+39 \\
+-5 \\
+9.25
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+39 \\
+4.25 \\
+9.25
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 0 & 3 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+30.5 \\
+4.25 \\
+9.25
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\ 
+y \\
+z
+\end{pmatrix}
+&=
+\begin{pmatrix}
+2.75 \\
+4.25 \\
+9.25
+\end{pmatrix}
+\end{align*} 
+\\
+The solution is $(x, y, z) = (2.75, 4.25, 9.25)$. \\ \\
+Thus the yield for one bundle of inferior rice is 2.75 dou. The yield for one bundle of medium-grade rice is 4.25 dou. The yield for one bundle of superior rice is 9.25 dou.
+
+\end{solution}
+
+\begin{problem}
+\end{problem}
+
+\end{document}

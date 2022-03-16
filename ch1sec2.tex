@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\title{Chapter 1 Section 2}
+\author{Andrew Taylor}
+\date{March 16 2022}
+\begin{document}
+\maketitle
+
+\begin{problem}
+Find all solutions for the equations
+
+\begin{align*}
+\begin{vmatrix}
+x + y - 2z = 5 \\
+2x + 3y + 4z = 2
+\end{vmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+
+We can use Gauss-Jordan elimination.
+
+\begin{align*}
+&\begin{vmatrix}
+1 & 1 & -2 & 5 \\ 
+2 & 3 & 4 & 2 
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 1 & -2 & 5 \\ 
+0 & 1 & 8 & -8 
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & -10 & 13 \\ 
+0 & 1 & 8 & -8 
+\end{vmatrix}
+\end{align*}
+
+This gives us the equations $x - 10z = 13$ and $y + 8z = -8$. \\
+
+Thus there are infinitely many solutions. The solutions are 
+
+\begin{equation*}
+\begin{pmatrix}x \\ y \\ z \end{pmatrix} = \begin{pmatrix}13 + 10t \\ -8 - 8t \\ t \end{pmatrix}
+\end{equation*}
+
+for an arbitrary real number $t$.
+
+\end{solution}
+
+\end{document}

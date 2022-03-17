@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, amsthm}
 \newtheorem{problem}{Problem}
-\newtheorem{solution}{Solution}
+\newtheorem*{solution}{Solution}
 \title{Chapter 1 Section 2}
 \author{Andrew Taylor}
 \date{March 16 2022}
@@ -47,6 +47,43 @@ Thus there are infinitely many solutions. The solutions are
 \end{equation*}
 
 for an arbitrary real number $t$.
+
+\end{solution}
+
+\begin{problem}
+Find all solutions for the equations
+
+\begin{align*}
+\begin{vmatrix}
+3x + 4y - z = 8 \\
+6x + 8y - 2z = 3
+\end{vmatrix}
+\end{align*}
+
+\end{problem}
+
+\begin{solution}
+
+We can use Gauss-Jordan elimination once again (and after this problem we may use Gauss-Jordan elimination without saying it explicitly).
+
+\begin{align*}
+&\begin{vmatrix}
+3 & 4 & -1 & 8 \\ 
+6 & 8 & -2 & 3 
+\end{vmatrix} \\
+&\begin{vmatrix}
+3 & 4 & -1 & 8 \\ 
+0 & 0 & 0 & -13 
+\end{vmatrix} \\
+\end{align*}
+
+This gives us the equations $3x + 4y - z = 8$ and $0 = -13$. The second equation is a contradiction. \\
+
+Why is the second equation a contradiction? It's because each equation represents a line, and the two lines do not intersect. \\
+
+When we do Gauss-Jordan elimination, we assume there is a solution. When this assumption is wrong, we can get a contradiction like $0 = 13$. \\
+
+Our method shows us that the system is inconsistent, so there are no solutions.
 
 \end{solution}
 

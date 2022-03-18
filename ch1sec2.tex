@@ -178,5 +178,64 @@ x \\ y
 
 \end{solution}
 
+\begin{problem}
+Find the solution to the equations
+
+\begin{align*}
+\begin{vmatrix}
+x_{3} +  x_{4} = 0 \\
+x_{2} +  x_{3} = 0 \\
+x_{1} + x_{2} = 0 
+\end{vmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+
+Remember that in Gauss-Jordan elimination we can divide a row by a scalar, subtract a multiple of a row from another row, and swap rows. These are three elementary row operations we can use on linear systems to get a matrix in reduced row echelon form. In other words, we are computing rref(A) for the augmented matrix A.
+
+\begin{align*}
+&\begin{vmatrix}
+0 & 0 & 1 & 1 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & -1 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & 0 & 1 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & -1 & 0 \\
+0 & 0 & 1 & 1 & 0 
+\end{vmatrix} \\
+\end{align*}
+
+Now let $r = x_{4}$ be any arbitrary real number. Then the solutions are \\
+
+\begin{equation*}
+\begin{pmatrix}
+x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-r \\ r \\ -r \\ r
+\end{pmatrix}
+\end{equation*} \\
+
+It may not have been necessary to get the augmented matrix in reduced row echelon form (rref) but it's good practice. We could have solved the problem without row operations by making a clever substitution ($r = x_{4}$) at the very beginning.
+
+\end{solution}
 
 \end{document}

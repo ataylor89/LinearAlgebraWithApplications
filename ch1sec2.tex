@@ -340,4 +340,48 @@ x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5}
 
 \end{solution}
 
+\begin{problem}
+
+Solve this system for the variables $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$.
+
+\begin{align*}
+\begin{vmatrix}
+x_{2} + 2x_{4} + 3x_{5} = 0 \\
+4x_{4} + 8x_{5} = 0
+\end{vmatrix}
+\end{align*}
+
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+&\begin{vmatrix}
+0 & 1 & 0 & 2 & 3 & 0 \\
+0 & 0 & 0 & 4 & 8 & 0 
+\end{vmatrix} \\
+&\begin{vmatrix}
+0 & 1 & 0 & 2 & 3 & 0 \\
+0 & 0 & 0 & 1 & 2 & 0 
+\end{vmatrix} \\
+&\begin{vmatrix}
+0 & 1 & 0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 1 & 2 & 0 
+\end{vmatrix}
+\end{align*}
+
+Let $x_{5} = t$. Then we have the solutions
+
+\begin{equation*}
+\begin{pmatrix}
+x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5}
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 \\ t \\ 0 \\ -2t \\ t
+\end{pmatrix}
+\end{equation*}
+
+
+\end{solution}
+
 \end{document}

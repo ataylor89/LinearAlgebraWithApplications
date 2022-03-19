@@ -391,11 +391,52 @@ Find all solutions for the equations
 \begin{align*}
 \begin{vmatrix}
 x_{4} + 2x_{5} - x_{6} = 2 \\
-x_{2} + 2x_{2} + x_{5} - x_{6} = 0 \\
+x_{1} + 2x_{2} + x_{5} - x_{6} = 0 \\
 x_{1} + 2x_{2} + 2x_{3} - x_{5} + x_{6} = 2
 \end{vmatrix}
 \end{align*}
 
 \end{problem}
+
+\begin{solution}
+
+\begin{align*}
+&\begin{vmatrix}
+0 & 0 & 0 & 1 & 2 & -1 & 2 \\
+1 & 2 & 0 & 0 & 1 & -1 & 0 \\
+1 & 2 & 2 & 0 & -1 & 1 & 2
+\end{vmatrix} \\
+&\begin{vmatrix}
+0 & 0 & 0 & 1 & 2 & -1 & 2 \\
+1 & 2 & 0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 2 & 0 & -2 & 2 & 2
+\end{vmatrix} \\
+&\begin{vmatrix}
+0 & 0 & 0 & 1 & 2 & -1 & 2 \\
+1 & 2 & 0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 1 & 0 & -1 & 1 & 1
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 2 & 0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 1 & 0 & -1 & 1 & 1 \\
+0 & 0 & 0 & 1 & 2 & -1 & 2 
+\end{vmatrix}
+\end{align*} 
+
+Let $x_{2} = r$, $x_{5} = s$, $x_{6} = t$. Then the solutions are 
+
+\begin{equation*}
+\begin{pmatrix}
+x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5} \\ x_{6} 
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-2r - s + t \\ r \\ 1 + s - t \\ 2 - 2s + t \\ s \\ t
+\end{pmatrix}
+\end{equation*} \\
+
+where $r$, $s$, and $t$ are arbitrary real numbers.
+
+\end{solution}
 
 \end{document}

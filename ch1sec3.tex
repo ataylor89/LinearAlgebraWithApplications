@@ -176,4 +176,56 @@ Elementary row operations are used in Gauss-Jordan elimination, which is the pro
 For one thing, given a matrix A, $rref(A)$ tells us the rank of matrix A. It also tells us the number of solutions for the linear system represented by the matrix A. The number of solutions can be none, infinite, or exactly one.
 \end{solution}
 
+\begin{problem}
+Write the linear system 
+
+\begin{align*}
+\begin{vmatrix}
+x + 2y = 7 \\
+3x + y = 11
+\end{vmatrix}
+\end{align*}
+
+in vector form. Then solve the system.
+\end{problem}
+
+\begin{solution}
+Below is the system in vector form.
+
+\begin{align*}
+x \begin{pmatrix} 1 \\ 3 \end{pmatrix} + y \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+= 
+\begin{pmatrix}7 \\ 11 \end{pmatrix}
+\end{align*}
+
+Now let's solve the system.
+
+\begin{align*}
+&\begin{vmatrix}
+1 & 2 & 7 \\
+3 & 1 & 11
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 2 & 7 \\
+0 & -5 & -10
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 2 & 7 \\
+0 & 1 & 2
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & 3 \\
+0 & 1 & 2
+\end{vmatrix}
+\end{align*}
+
+Thus the solution to the linear system is
+$\begin{pmatrix} x \\ y \end{pmatrix}
+=
+\begin{pmatrix} 3 \\ 2 \end{pmatrix}$ \\
+
+When we substitute $x$ and $y$ into our linear combination (the system in vector form) we get the vector $\begin{pmatrix} 7 \\ 11 \end{pmatrix}$.
+
+\end{solution}
+
 \end{document}

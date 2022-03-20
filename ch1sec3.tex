@@ -91,4 +91,87 @@ Thus the matrix has rank 3.
 
 \end{solution}
 
+\begin{problem}
+$\begin{vmatrix}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{vmatrix}$
+\end{problem}
+
+\begin{solution}
+
+We can subtract row one from rows two and three in a single step. \\
+
+Remember that subtracting a multiple of a row from another row is an elementary row operation that we can use in finding the reduced row echelon form (rref) of a matrix. We can also divide a row by a scalar, and swap rows. For this problem we just need subtraction.
+
+\begin{align*}
+&\begin{vmatrix}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 1 & 1 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{vmatrix}
+\end{align*}
+
+Thus the rank of the matrix is 1. \\
+
+As a note, it's easy to remember elementary row operations just by remember addition and multiplication. We use subtraction and division by a scalar in elementary row operations. But we can also swap rows. Swapping rows is important for finding and confirming the reduced row echelon form of a matrix.
+\end{solution}
+
+\begin{problem}
+$\begin{vmatrix}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 9
+\end{vmatrix}$
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+&\begin{vmatrix}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 9
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+0 & -6 & -12
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 4 & 7 \\
+0 & -3 & -6 \\
+0 & -6 & -12
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 4 & 7 \\
+0 & 1 & 2 \\
+0 & -6 & -12
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & -1 \\
+0 & 1 & 2 \\
+0 & -6 & -12
+\end{vmatrix} \\
+&\begin{vmatrix}
+1 & 0 & -1 \\
+0 & 1 & 2 \\
+0 & 0 & 0
+\end{vmatrix}
+\end{align*}
+
+Thus the rank of the matrix is two. \\
+
+As a note, we used subtraction of rows and division by a scalar in our algorithm for finding the reduced row echelon form of the matrix. \\
+
+These elementary row operations are derived from algebraic rules, like the axioms of a field, and the axioms of the real numbers. \\
+
+Elementary row operations are used in Gauss-Jordan elimination, which is the process of finding the reduced row echelon form of a matrix. Given a matrix A, we can find rref(A), and rref(A) tells us many valuable things about the matrix and the linear system it represents.
+\end{solution}
+
 \end{document}

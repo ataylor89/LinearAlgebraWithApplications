@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
 \title{Chapter 1 Section 3}
@@ -226,6 +226,24 @@ $\begin{pmatrix} x \\ y \end{pmatrix}
 
 When we substitute $x$ and $y$ into our linear combination (the system in vector form) we get the vector $\begin{pmatrix} 7 \\ 11 \end{pmatrix}$.
 
+\end{solution}
+
+\begin{problem}
+Vectors $\vec{v_{1}}$, $\vec{v_{2}}$ and $\vec{v_{3}}$ are shown in the figure below. \\
+
+\includegraphics[width=5cm, height=4cm]{problem1.3.6} \\
+
+How many solutions does the system
+
+\begin{equation*}
+x\vec{v_{1}} + y\vec{v_{2}} = v_{3}
+\end{equation*}
+
+have? Argue geometrically.
+\end{problem}
+
+\begin{solution}
+Let $L$ be the line defined by the origin and $\vec{v_{3}}$. A linear combination of $\vec{v_{1}}$ and $\vec{v_{1}}$ can only intersect L at the origin, but not at the tip of $\vec{v_{3}}$. Thus there are no solutions to the system.
 \end{solution}
 
 \end{document}

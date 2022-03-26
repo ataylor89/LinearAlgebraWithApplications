@@ -8,6 +8,7 @@
 \newtheorem{problem}{Problem}
 
 \begin{document}
+\maketitle
 
 \begin{problem}
 Imagine yourself cruising in the Mediterranean as a crew member on a French coast goard boat, looking for evildoers. Periodically, your boat radios its position to headquarters in Marseille. You expect that communications will be intercepted. So, before you broadcast anything, you have to transform the actual position of the boat,
@@ -18,7 +19,7 @@ x1 \\ x2
 \end{bmatrix}
 \end{align*}
 
-($x_{1}$ for Eastern longitude, $x_{2}$ for Northern latitude), into an encoded position)
+($x_{1}$ for Eastern longitude, $x_{2}$ for Northern latitude), into an encoded position
 
 \begin{align*}
 \begin{bmatrix}
@@ -33,7 +34,7 @@ y_{1} &= x_{1} + 3x_{2} \\
 y_{2} &= 2x_{2} + 5x_{2}
 \end{align*}
 
-For example, when the actual position of your boat is $5 \circ E$, $42 \circ N$, or
+For example, when the actual position of your boat is $5^\circ E$, $42^\circ N$, or
 
 \begin{align*}
 \vec{x} = \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix} 5 \\ 42 \end{bmatrix}
@@ -45,8 +46,8 @@ your encoded position will be
 \vec{y} 
 &= \begin{bmatrix} y_{1} \\ y_{2} \end{bmatrix} \\
 &= \begin{bmatrix} 
-x_{1} & 3x_{2} \\ 
-2x_{1} & 5x_{2} 
+x_{1} + 3x_{2} \\ 
+2x_{1} + 5x_{2} 
 \end{bmatrix} \\
 &= \begin{bmatrix}
 5 + 3 * 42 \\ 2 * 5 + 5 * 42

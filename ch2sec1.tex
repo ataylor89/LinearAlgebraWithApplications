@@ -6,6 +6,7 @@
 \date{March 26 2022}
 \newtheorem{theorem}{Theorem}
 \newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
 
 \begin{document}
 \maketitle
@@ -68,8 +69,67 @@ The coding transformation can be represented as
 
 Figure 1
 
-\includegraphics[scale=0.1]{ch2sec1fig1}
+\includegraphics[scale=0.1]{ch2sec1fig1} 
+
+
+As the ship reaches a new position, the sailor on duty at headquarters in Marseille receives the encoded message
+
+\begin{align*}
+\vec{b} = \begin{bmatrix} 133 \\ 223 \end{bmatrix} 
+\end{align*}
+
+He must determine the actual position of the boat. He will have to solve the linear system
+
+\begin{align*}
+A\vec{x} = \vec{b}
+\end{align*}
+
+or, more explicitly,
+
+\begin{align*}
+\begin{vmatrix}
+x_{1} + 3x_{2} = 133 \\
+2x_{1} + 5x_{2} = 223
+\end{vmatrix}
+\end{align*}
+
+Here is his solution. Is it correct?
+
+\begin{align*}
+\vec{x} = \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix} 4 \\ 43 \end{bmatrix}
+\end{align*}
 
 \end{problem}
+
+\begin{solution}
+
+We can use elementary row operations to solve the system. Remember, the elementary row operations are subtracting a multiple of a row, dividing a row by a scalar, and swapping rows.
+
+\begin{align*}
+& \begin{bmatrix}
+1 & 3 & 133 \\
+2 & 5 & 223
+\end{bmatrix} \\
+&\begin{bmatrix}
+1 & 3 & 133 \\
+0 & -1 & -43
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 3 & 133 \\
+0 & 1 & 43
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 0 & 4 \\
+0 & 1 & 43
+\end{bmatrix}
+\end{align*}
+
+Thus his solution is correct. The solution is 
+
+\begin{align*}
+\vec{x} = \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix} 4 \\ 43 \end{bmatrix}
+\end{align*}
+
+\end{solution}
 
 \end{document}

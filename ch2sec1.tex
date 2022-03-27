@@ -134,4 +134,85 @@ What we really did is we applied the linear transformation (the code we were giv
 
 \end{solution}
 
+Consider the transformations from $\mathbb{R}^3$ to $\mathbb{R}^3$. Which of these transformations are linear?
+
+\begin{problem}
+
+\begin{align*}
+y_{1} &= 2x_{2} \\
+y_{2} &= x_{2} + 2 \\
+y_{3} &= 2x_{2}
+\end{align*}
+
+\end{problem}
+
+\begin{solution}
+Let $T$ be the linear transformation, and let $\vec{v}$ and $\vec{w}$ be vectors in $\mathbb{R}^3$.
+
+\begin{align*}
+& T(\vec{v} + \vec{w}) \\
+&= T((v_{1}, v_{2}, v_{3}) + (w_{1}, w_{2}, w_{3})) \\
+&= T((v_{1} + w_{1}, v_{2} + w_{2}, v_{3} + w_{3})) \\
+&= (2(v_{2} + w_{2}), v_{2} + w_{2} + 2, 2(v_{2} + w_{2}))
+\end{align*}
+
+\begin{align*}
+& T(\vec{v}) + T(\vec{w}) \\
+&= T((v_{1}, v_{2}, v_{3})) + T((w_{1}, w_{2}, w_{3})) \\
+&= (2(v_{2}), v_{2} + 2, 2(v_{2})) + (2(w_{2}), w_{2} + 2, 2(w_{2})) \\
+&= (2(v_{2} + w_{2}), v_{2} + w_{2} + 2, 2(v_{2} + w_{2}))
+\end{align*}
+
+Thus 
+
+\begin{align*}
+T(\vec{v} + \vec{w}) = T(\vec{v}) + T(\vec{w})
+\end{align*}
+
+Let $k$ be a scalar in $\mathbb{R}$.
+
+\begin{align*}
+& T(k\vec{v}) \\
+&= T((kv_{1}, kv_{2}, kv_{3})) \\
+&= (2kv_{2}, kv_{2} + 2, 2kv_{2}) 
+\end{align*}
+
+\begin{align*}
+& kT(\vec{v}) \\
+&= kT((v_{1}, v_{2}, v_{3})) \\
+&= k(2v_{2}, v_{2} + 2, 2v_{2}) \\
+&= (2kv_{2}, kv_{2} + 2, 2kv_{2}) 
+\end{align*}
+
+Thus 
+
+\begin{align*}
+T(k\vec{v}) = kT(\vec{v})
+\end{align*}
+
+T satisfies the two properties of a linear transformation, so T is a linear transformation.
+
+\end{solution}
+
+\begin{problem}
+
+\begin{align*}
+y_{1} &= 2x_{2} \\
+y_{2} &= 3x_{3}  \\
+y_{3} &= x_{1}
+\end{align*}
+
+\end{problem}
+
+\begin{problem}
+
+\begin{align*}
+y_{1} &= x_{2} - x_{3} \\
+y_{2} &= x_{1} x_{3}  \\
+y_{3} &= x_{1} - x_{2}
+\end{align*}
+
+\end{problem}
+
+
 \end{document}

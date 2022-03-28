@@ -260,5 +260,32 @@ y_{3} &= x_{1} - x_{2}
 
 \end{problem}
 
+\begin{solution}
+Let T be the linear transformation and let $\vec{v}$ and $\vec{w}$ be vectors in $\mathbb{R}^3$.
+
+\begin{align*}
+& T(\vec{v} + \vec{w}) \\
+&= T((v_{1}, v_{2}, v_{3}) + (w_{1}, w_{2}, w_{3})) \\ 
+&= T((v_{1} + w_{1}, v_{2} + w_{2}, v_{3} + w_{3})) \\
+&= (v_{2} + w_{2} - v_{3} - w_{3}, (v_{1} + w_{1}) * (v_{3} + w_{3}), v_{1} + w_{1} - v_{2} - w_{2}) 
+\end{align*}
+
+\begin{align*}
+& T(\vec{v}) + T(\vec{w}) \\
+&= (v_{2} - v_{3}, v_{1} * v_{3}, v_{1} - v_{2}) + (w_{2} - w_{3}, w_{1} * w_{3}, w_{1} - w_{2}) \\
+&= (v_{2} - v_{3} + w_{2} - w_{3}, v_{1} * v_{3} + w_{1} * w_{3}, v_{1} - v_{2} + w_{1} - w_{2}) 
+\end{align*}
+
+The two vectors are not equal, therefore T is not a linear transformation. 
+
+In other words,
+
+\begin{align*}
+T(\vec{v}) + T(\vec{w}) \neq T(\vec{v} + \vec{w})
+\end{align*}
+
+so T is not a linear transformation.
+\end{solution}
+
 
 \end{document}

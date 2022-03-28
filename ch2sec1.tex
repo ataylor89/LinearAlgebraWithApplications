@@ -204,6 +204,52 @@ y_{3} &= x_{1}
 
 \end{problem}
 
+\begin{solution}
+Let T be the linear transformation, $\vec{v}$ and $\vec{w}$ be vectors in $\mathbb{R}^{3}$.
+
+\begin{align*}
+& T(\vec{v} + \vec{w}) \\ 
+&= T((v_{1}, v_{2}, v_{3}) + (w_{1}, w_{2}, w_{3})) \\
+&= T((v_{1} + w_{1}, v_{2} + w_{2}, v_{3} + w_{3})) \\
+&= (2(v_{2} + w_{2}), 3(v_{3} + w_{3}), v_{1} + w_{1})
+\end{align*}
+
+\begin{align*}
+& T(\vec{v}) + T(\vec{w}) \\
+&= (2v_{2}, 3v_{3}, v_{1}) + (2w_{2}, 3w_{3}, w_{1}) \\
+&= (2(v_{2} + w_{2}), 3(v_{3} + w_{3}), v_{1} + w_{1})
+\end{align*}
+
+Thus
+
+\begin{align*}
+T(\vec{v}) + T(\vec{w}) = T(\vec{v} + \vec{w})
+\end{align*}
+
+Let $k$ be a scalar in the reals.
+
+\begin{align*}
+& T(k\vec{v}) \\
+&= T((kv_{1}, kv_{2}, kv_{3}) \\
+&= (2kv_{2}, 3kv_{3}, kv_{1}) 
+\end{align*}
+
+\begin{align*}
+& kT(\vec{v}) \\
+&= k(2v_{2}, 3v_{3}, v_{1}) \\
+&= (2kv_{2}, 3kv_{3}, kv_{1})
+\end{align*}
+
+Thus 
+
+\begin{align*}
+T(k\vec{v}) = kT(\vec{v})
+\end{align*}
+
+Therefore T is a linear transformation, because it satisfies both requirements of a linear transformation.
+
+\end{solution}
+
 \begin{problem}
 
 \begin{align*}

@@ -336,5 +336,84 @@ T \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} &= \begin{bmatrix} -13 \\ 17 \end{bm
 Find the matrix A of T.
 \end{problem}
 
+\begin{solution}
+We can write the equation
+
+\begin{align*}
+\begin{pmatrix}
+7 \\ 1
+\end{pmatrix}
+&= A \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \\
+\begin{pmatrix}
+7 \\ 1
+\end{pmatrix}
+&= 
+\begin{pmatrix} 
+c_{1} & c_{2} & c_{3} \\
+d_{1} & d_{2} & d_{3}
+\end{pmatrix}
+\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}
+\end{align*}
+
+So $c_{1} = 7$ and $d_{1} = 1$
+
+\begin{align*}
+\begin{pmatrix}
+6 \\ 9
+\end{pmatrix}
+&= A \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \\
+\begin{pmatrix}
+6 \\ 9
+\end{pmatrix}
+&= 
+\begin{pmatrix} 
+c_{1} & c_{2} & c_{3} \\
+d_{1} & d_{2} & d_{3}
+\end{pmatrix}
+\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
+\end{align*}
+
+So $c_{2} = 6$ and $d_{2} = 9$.
+
+\begin{align*}
+\begin{pmatrix}
+-13 \\ 17
+\end{pmatrix}
+&= A \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \\
+\begin{pmatrix}
+-13 \\ 17
+\end{pmatrix}
+&= 
+\begin{pmatrix} 
+c_{1} & c_{2} & c_{3} \\
+d_{1} & d_{2} & d_{3}
+\end{pmatrix}
+\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\end{align*}
+
+So $c_{3} = -13$ and $d_{3} = 17$. Thus 
+
+\begin{align*}
+A = 
+\begin{pmatrix}
+7 & 6 & -13\\
+1 & 9 & 17
+\end{pmatrix}
+\end{align*}
+
+and 
+
+\begin{align*}
+T(\vec{x}) = \begin{pmatrix}
+7 & 6 & -13\\
+1 & 9 & 17
+\end{pmatrix}
+\begin{pmatrix}
+x_{1} \\ x_{2} \\ x_{3}
+\end{pmatrix}
+\end{align*}
+
+\end{solution}
+
 
 \end{document}

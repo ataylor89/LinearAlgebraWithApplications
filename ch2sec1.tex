@@ -481,4 +481,57 @@ Is this transformation linear? If so, find its matrix A in terms of the vectors 
 
 \end{problem}
 
+\begin{solution}
+\begin{align*}
+& T(\vec{x} + \vec{y}) \\
+&= T \begin{bmatrix} x_{1} + y_{1} \\ x_{2} + y_{2} \\ \vdots \\ x_{n} + y_{n} \end{bmatrix} \\
+&= (x_{1} + y_{1}) \vec{v_{1}} + (x_{2} + y_{2}) \vec{v_{2}} + \cdots + (x_{n} + y_{n}) \vec{v_{m}}
+\end{align*}
+
+\begin{align*}
+& T(\vec{x}) + T(\vec{y}) \\
+&= T \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix} + T \begin{bmatrix} y_{1} \\ y_{2} \\ \vdots \\ y_{n} \end{bmatrix} \\
+&= (x_{1} \vec{v_{1}} + x_{2} \vec{v_{2}} + \cdots + x_{n} \vec{v_{m}}) + (y_{1} \vec{v_{1}} + y_{2} \vec{v_{2}} + \cdots + y_{n} \vec{v_{m}}) \\
+&= (x_{1} + y_{1}) \vec{v_{1}} + (x_{2} + y_{2}) \vec{v_{2}} + \cdots + (x_{n} + y_{n}) \vec{v_{m}}
+\end{align*}
+
+\begin{align*}
+& kT(\vec{x}) \\
+&= kT \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix} \\
+&= k (x_{1} \vec{v_{1}} + x_{2} \vec{v_{2}} + \cdots + x_{n} \vec{v_{m}})
+\end{align*}
+
+\begin{align*}
+& T(k\vec{x}) \\
+&= T \begin{bmatrix} kx_{1} \\ kx_{2} \\ \vdots \\ kx_{n} \end{bmatrix} \\
+&= (kx_{1} \vec{v_{1}} + kx_{2} \vec{v_{2}} + \cdots + kx_{n} \vec{v_{m}}) \\
+&= k (x_{1} \vec{v_{1}} + x_{2} \vec{v_{2}} + \cdots + x_{n} \vec{v_{m}})
+\end{align*}
+
+Thus T is a linear transformation. The matrix of the transformation is
+
+\begin{align*}
+A = \begin{bmatrix}
+\vec{v_{11}} & \vec{v_{21}} & \cdots & \vec{v_{m1}} \\
+\vec{v_{12}} & \vec{v_{22}} & \cdots & \vec{v_{m2}} \\
+\vdots \\
+\vec{v_{1n}} & \vec{v_{2n}} & \cdots & \vec{v_{mn}} \\
+\end{bmatrix}
+\end{align*}
+
+Thus 
+
+\begin{align*}
+T \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix} &= \begin{bmatrix}
+\vec{v_{11}} & \vec{v_{21}} & \cdots & \vec{v_{m1}} \\
+\vec{v_{12}} & \vec{v_{22}} & \cdots & \vec{v_{m2}} \\
+\vdots \\
+\vec{v_{1n}} & \vec{v_{2n}} & \cdots & \vec{v_{mn}} \\
+\end{bmatrix} 
+\begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix}
+\end{align*}
+
+The vectors $\vec{v_{1}}, \vec{v_{2}}, ..., \vec{v_{m}}$ are column vectors in the matrix A.
+\end{solution}
+
 \end{document}

@@ -544,6 +544,38 @@ y_{2} &= 3x_{1} + 20x_{2}
 \end{problem}
 
 \begin{solution}
+\begin{align*}
+\begin{bmatrix}
+x_{1} + 7x_{2} = y_{1} \\
+3x_{1} + 20x_{2} = y_{2}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} + 7x_{2} = y_{1} \\
+-x_{2} = y_{2} - 3y_{1}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} + 7x_{2} = y_{1} \\
+-x_{2} = y_{2} - 3y_{1}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} + 7x_{2} = y_{1} \\
+x_{2} = 3y_{1} - y_{2}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} = y_{1} - 21y_{1} + 7y_{2} \\
+x_{2} = 3y_{1} - y_{2}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} = -20y_{1} + 7y_{2} \\
+x_{2} = 3y_{1} - y_{2}
+\end{bmatrix} 
+\end{align*}
+
+Thus the inverse of the transformation is 
+
+\begin{align*}
+\begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix}-20 & 7 \\ 3 & -1 \end{bmatrix} \begin{bmatrix} y_{1} \\ y_{2} \end{bmatrix}
+\end{align*}
 \end{solution}
 
 \end{document}

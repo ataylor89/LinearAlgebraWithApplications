@@ -578,4 +578,48 @@ Thus the inverse of the transformation is
 \end{align*}
 \end{solution}
 
+In the next four exercises, decide whether the given matrix is invertible, and find the inverse if it exists.
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+2 & 3 \\ 6 & 9
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+We can create the linear system
+
+\begin{align*}
+\begin{bmatrix}
+2x_{1} + 3x_{2} = y_{1} \\
+6x_{1} + 9x_{2} = y_{2}
+\end{bmatrix}
+\end{align*}
+
+and we can use row ops to find the inverse of the coefficient matrix.
+
+\begin{align*}
+\begin{bmatrix}
+2x_{1} + 3x_{2} = y_{1} \\
+6x_{1} + 9x_{2} = y_{2}
+\end{bmatrix} \\
+\begin{bmatrix}
+2x_{1} + 3x_{2} = y_{1} \\
+0 = y_{2} - 3y_{1}
+\end{bmatrix} 
+\end{align*}
+
+We know that
+
+\begin{align*}
+3y_{1} = y_{2} \\
+y_{1} = \frac{y_{2}}{3}
+\end{align*}
+
+This is a reason why we use determinants. I started doing row ops before I calculated the determinant of the matrix. The matrix has a determinant of 0 so the matrix does not have an inverse. In other words, the matrix is not invertible. For a matrix to be invertible, its determinant has to be nonzero. In fact, there are algorithms for calculating the inverse of a matrix that divide every number in the matrix by the determinant. If the determinant were zero, this division would not be possible. 
+
+\end{solution}
+
 \end{document}

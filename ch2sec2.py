@@ -34,7 +34,7 @@ def main():
     ]
     for i in range(len(transforms)):
         transform = transforms[i]
-        plotL(np.matmul(transform, U), np.matmul(transform, V), 2, 2, f"Transformation {i}", f"ch2sec2fig{i}.png")
+        plotL(np.matmul(transform, U), np.matmul(transform, V), 2, 2, "Transformation %d" %(i+1), "ch2sec2fig%d.png" %(i+1))
 
 if __name__ == '__main__':
     main()

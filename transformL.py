@@ -4,6 +4,26 @@ import math
 import sys
 import ast
 
+def plotL(width, height, title, filename):
+    dim = max(width, height)
+    origin = np.array([[0, 0], [0, 0]])
+
+    V1 = np.array([width, 0])
+    V2 = np.array([0, height])
+
+    V = np.array([V1, V2])
+
+    fig, ax = plt.subplots()
+    ax.quiver(*origin, V[:,0], V[:,1], color=['blue'], angles='xy', scale_units='xy', scale=1)
+
+    plt.xlim(-1*dim, dim)
+    plt.ylim(-1*dim, dim)
+    plt.grid()
+    
+    plt.title(title,fontsize=10)
+    plt.savefig(filename, bbox_inches='tight')
+    plt.show()
+
 def transformL(width, height, transform, title, filename):
     dim = max(width, height)
     origin = np.array([[0, 0], [0, 0]])

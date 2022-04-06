@@ -2,15 +2,15 @@ from matplotlib import pyplot as plt
 import numpy as np
 import math
 
-def plotL(u, v, dimx, dimy, title, filename):
+def plotL(u, v, xmin, xmax, ymin, ymax, title, filename):
     origin = np.array([[0, 0], [0, 0]])
     V = np.array([u, v])
 
     fig, ax = plt.subplots()
     ax.quiver(*origin, V[:,0], V[:,1], color=['blue'], angles='xy', scale_units='xy', scale=1)
 
-    plt.xlim(-1*dimx, dimx)
-    plt.ylim(-1*dimy, dimy)
+    plt.xlim(xmin, xmax)
+    plt.ylim(ymin, ymax)
     plt.grid()
     
     plt.title(title,fontsize=10)
@@ -20,6 +20,7 @@ def plotL(u, v, dimx, dimy, title, filename):
 def main():
     U = np.array([0, 2])
     V = np.array([1, 0])
+    plotL(U, V, -2, 2, -2, 2, "The letter L", "ch2sec2fig0.png")
     angle = math.pi/4
     angle2 = math.pi/2
     angle3 = -1 * math.pi / 2
@@ -34,7 +35,7 @@ def main():
     ]
     for i in range(len(transforms)):
         transform = transforms[i]
-        plotL(np.matmul(transform, U), np.matmul(transform, V), 2, 2, "Transformation %d" %(i+1), "ch2sec2fig%d.png" %(i+1))
+        plotL(np.matmul(transform, U), np.matmul(transform, V), -2, 2, -2, 2, "Transformation %d" %(i+1), "ch2sec2fig%d.png" %(i+1))
 
 if __name__ == '__main__':
     main()

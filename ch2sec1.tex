@@ -622,4 +622,81 @@ This is a reason why we use determinants. I started doing row ops before I calcu
 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 2 \\ 4 & 9
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The determinant is  $1 * 9 - 4 * 2 = 1$. Thus the matrix is invertible. We can create the linear system
+
+\begin{align*}
+\begin{bmatrix}
+x_{1} + 2x_{2} = y_{1} \\
+4x_{1} + 9x_{2} = y_{2}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} + 2x_{2} = y_{1} \\
+x_{2} = y_{2} - 4y_{1}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} = y_{1} - 2y_{2} + 8y_{1} \\
+x_{2} = y_{2} - 4y_{1}
+\end{bmatrix} \\
+\begin{bmatrix}
+x_{1} = 9y_{1} - 2y_{2} \\
+x_{2} = -4y_{1} + y_{2}
+\end{bmatrix} 
+\end{align*}
+
+Thus the inverse of the matrix is
+
+\begin{align*}
+\begin{bmatrix}
+9 & -2 \\ -4 & 1
+\end{bmatrix}
+\end{align*}
+
+Let's check
+
+\begin{align*}
+\begin{bmatrix}
+1 & 2 \\ 4 & 9
+\end{bmatrix}
+\begin{bmatrix}
+9 & -2 \\ -4 & 1
+\end{bmatrix} 
+&=
+\begin{bmatrix}
+1 & 0 \\ 0 & 1
+\end{bmatrix}
+\end{align*}
+
+The inverse of the linear system is 
+
+\begin{align*}
+\begin{bmatrix}
+x_{1} = 9y_{1} - 2y_{2} \\
+x_{2} = -4y_{1} + y_{2}
+\end{bmatrix} 
+\end{align*}
+
+or 
+
+\begin{align*}
+\begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
+&= 
+\begin{bmatrix}
+9 & -2 \\ -4 & 1
+\end{bmatrix} 
+\begin{bmatrix}
+y_{1} \\ y_{2}
+\end{bmatrix}
+\end{align*}
+
+\end{solution}
+
 \end{document}

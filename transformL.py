@@ -42,3 +42,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# Example usage 
+# python transformL.py 1 2 "[[0, -1], [1, 0]]" rot90 rot90.png

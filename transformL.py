@@ -35,7 +35,6 @@ def main():
     width = int(sys.argv[1])
     height = int(sys.argv[2])
     transform = ast.literal_eval(sys.argv[3])
-    print(transform)
     title = sys.argv[4]
     filename = sys.argv[5]
     transformL(width, height, transform, title, filename)

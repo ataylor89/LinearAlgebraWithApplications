@@ -8,6 +8,10 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\refl}{ref}
+\newcommand{\vectorproj}[2][]{\proj_{#1}#2}
+\newcommand{\vectorrefl}[2][]{\refl_{#1}#2}
 
 \begin{document}
 \maketitle
@@ -174,6 +178,34 @@ w_{1}w_{2} & w_{2}^2
 0.36 & 0.48 \\
 0.48 & 0.64
 \end{bmatrix}
+\end{align*}
+\end{solution}
+
+\begin{problem}
+Let V be the plane defined by $2x_{1} + x_{2} - 2x_{3} = 0$ and let $\vec{x} = \begin{bmatrix}5 \\ 4 \\ -2 \end{bmatrix}$. Find $\vectorrefl[V]{\vec{x}}$.
+\end{problem}
+
+\begin{solution}
+The vector $\vec{v} = \begin{bmatrix} 2 \\ 1 \\ -2 \end{bmatrix}$ is perpendicular to the plane V. 
+\\
+\\
+We can get the unit vector $\vec{u}$ perpendicular to the plane by
+
+\begin{align*}
+\displaystyle \vec{u} &= \frac{1}{\Vert \vec{v} \rVert} \vec{v} \\
+&= \displaystyle \frac{1}{3} \begin{bmatrix} 2 \\ 1 \\ -2 \end{bmatrix} 
+\end{align*}
+
+We can now use the formula
+
+\begin{align*}
+\vectorrefl[V]{\vec{x}} &= \vectorproj[V]{\vec{x}} - \vectorproj[L]{\vec{x}} \\
+&= \vec{x} - 2\vectorproj[L]{\vec{x}} \\
+&= \vec{x} - 2(\vec{x} \cdot \vec{u}) \vec{u} \\
+&= \begin{bmatrix} 5 \\ 4 \\ -2 \end{bmatrix} - 2\left(\begin{bmatrix} 5 \\ 4 \\ -2 \end{bmatrix} \cdot \frac{1}{3} \begin{bmatrix} 2 \\ 1 \\ -2 \end{bmatrix}\right) \frac{1}{3} \begin{bmatrix} 2 \\ 1 \\ -2 \end{bmatrix} \\
+&= \begin{bmatrix} 5 \\ 4 \\ -2 \end{bmatrix} - 4 \begin{bmatrix} 2 \\ 1 \\ -2 \end{bmatrix} \\
+&= \begin{bmatrix} 5 \\ 4 \\ -2 \end{bmatrix} - \begin{bmatrix} 8 \\ 4 \\ -8 \end{bmatrix} \\
+&= \begin{bmatrix} -3 \\ 0 \\ 6 \end{bmatrix} 
 \end{align*}
 \end{solution}
 

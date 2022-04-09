@@ -412,4 +412,20 @@ We can solve for $\theta$.
 Thus $\theta \approx 2.49809$ radians.
 \end{solution}
 
+\begin{problem}
+Let L be the line in $\mathbb{R}^3$ that consists of all scalar multiples of the vector $\begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix}$. Find the orthogonal projection of the vector $\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$ onto L.
+\end{problem}
+
+\begin{solution}
+Let $\vec{x} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$ and $\vec{w} = \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix}$.
+
+\begin{align*}
+\vectorproj[L]{\vec{x}} &= \left( \frac{\vec{x} \cdot \vec{w}}{\vec{w} \cdot \vec{w}} \right) \vec{w} \\
+&= \left( \frac{\begin{bmatrix}1 \\ 1 \\ 1 \end{bmatrix} \cdot \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix}}{\begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} \cdot \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix}} \right) \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} \\
+&= \left( \frac{5}{9} \right) \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} \\
+&= \begin{bmatrix} \frac{10}{9} \\ \\  \frac{5}{9} \\ \\ \frac{10}{9} \end{bmatrix}
+\end{align*}
+
+\end{solution}
+
 \end{document}

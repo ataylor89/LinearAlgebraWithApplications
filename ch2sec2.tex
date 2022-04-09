@@ -334,4 +334,32 @@ The matrix of the rotation is
 
 \end{solution}
 
+\begin{problem}
+Consider a linear transformation from $\mathbb{R}^2$ to $\mathbb{R}^3$. Use $T(\vec{e_{1}})$ and $T(\vec{e_{2}})$ to describe the image of the unit square geometrically.
+\end{problem}
+
+\begin{solution}
+Let $\vec{x}$ be a vector in the unit square. We can write the vector $\vec{x}$ as 
+
+\begin{align*}
+\vec{x} = x_{1} \vec{e_{1}} + x_{2} \vec{e_{2}}
+\end{align*}
+ 
+where $0 \leq x_{1}, x_{2} \leq 1$ and $\vec{e_{1}}$, $\vec{e_{2}}$ are the unit vectors. Thus
+
+\begin{align*}
+T(\vec{x}) &= T(x_{1} \vec{e_{1}} + x_{2} \vec{e_{2}}) \\\
+&= T(x_{1} \vec{e_{1}}) + T(x_{2} \vec{e_{2}}) \\
+&= x_{1} T(\vec{e_{1}}) + x_{2} T(\vec{e_{2}}) 
+\end{align*}
+
+The vectors $T(\vec{e_{1}})$ and $T(\vec{e_{2}})$ describe a parallelogram in $\mathbb{R}^3$. \\
+
+Thus $T(\vec{x}) =  x_{1} T(\vec{e_{1}}) + x_{2} T(\vec{e_{2}})$ is a vector in that parallelogram in $\mathbb{R}^3$. \\
+
+Note that we got our equation for $T(\vec{x})$ using the properties of linear transformations. \\
+
+$T(a+b) = T(a) + T(b)$ and $T(ka)$ = $kT(a)$ for vectors $a, b$ and scalar $k$.
+\end{solution} 
+
 \end{document}

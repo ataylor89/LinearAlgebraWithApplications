@@ -362,4 +362,26 @@ Note that we got our equation for $T(\vec{x})$ using the properties of linear tr
 $T(a+b) = T(a) + T(b)$ and $T(ka)$ = $kT(a)$ for vectors $a, b$ and scalar $k$.
 \end{solution} 
 
+\begin{problem}
+Interpret the following linear transformation geometrically:
+
+\begin{align*}
+T(\vec{x}) = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix} \vec{x}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The matrix of the transformation is a rotation matrix combined with a scaling. Since a rotation matrix has the form 
+
+\begin{align*}
+\begin{bmatrix} a & -b \\ b & a \end{bmatrix}
+\end{align*}
+
+We see that $\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ \\ \\
+
+The vector $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$ forms a $-45^\circ$ angle with the X axis. The vector has magnitude $\sqrt{2}$. \\
+
+Thus the linear transformation $T$ applies a rotation of $45^\circ$ in the clockwise direction and a scaling of $\sqrt{2}$.
+\end{solution}
+
 \end{document}

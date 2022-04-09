@@ -11,3 +11,4 @@ transformL(1, 2, [[1, 0], [0, 0]], 2, 'Orthogonal projection of L onto the X axi
 transformL(1, 2, [[0, 0], [0, 1]], 2, 'Orthogonal projection of L onto the Y axis', 'Lorthogonalprojy.png')
 transformL(1, 2, [[math.cos(math.pi/3), -1 * math.sin(math.pi/3)], [math.sin(math.pi/3), math.cos(math.pi/3)]], 2, 'Rotate L sixty degrees counterclockwise', 'Lrot60.png')
 transformL(1, 2, [[3, -4], [4, 3]], 10, 'Multiply by the rotation matrix [[3, -4], [4, 3]]', 'Lrotscale345.png')
+transformL(1, 2, [[3, 1], [1, 2]], 4, 'L under T(x) = [[3, 1], [1, 2]] x', 'L3112.png')

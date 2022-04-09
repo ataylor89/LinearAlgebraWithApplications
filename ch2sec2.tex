@@ -236,4 +236,55 @@ The matrix of a counterclockwise rotation through $\displaystyle \frac{\pi}{6}$ 
 \end{align*}
 \end{solution}
 
+\begin{problem}
+Let $T(\vec{x})$ be the linear transformation
+
+\begin{align*}
+T(\vec{x}) &= \begin{bmatrix}a & -b \\ b & a \end{bmatrix} \vec{x} \\
+		&= \begin{bmatrix}a & -b \\ b & a \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
+\end{align*}
+
+How does the linear transformation $T(\vec{x})$ affect the letter L? Remember that our letter L is composed of vectors $\begin{bmatrix} 0 \\ 2 \end{bmatrix}$ and $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$.
+\end{problem}
+
+\begin{solution}
+The vector $\begin{bmatrix} a \\ b \end{bmatrix}$ can be written in polar coordinates as
+
+\begin{align*}
+\begin{bmatrix} a \\ b \end{bmatrix} &= \begin{bmatrix} r \cos(\theta) \\ r \sin(\theta) \end{bmatrix}
+\end{align*}
+
+We can substitute these polar coordinates into the linear transformation, and write it as
+
+\begin{align*}
+T(\vec{x}) &= \begin{bmatrix}a & -b \\ b & a \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+		&= \begin{bmatrix}r \cos(\theta) & -r \sin(\theta) \\ r \sin(\theta) & r \cos(\theta) \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+		&= r \begin{bmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} 
+\end{align*}
+
+The linear transformation rotates the vector counterclockwise through an angle of $\theta$ and scales the vector by a factor of $r$. 
+\\ 
+\\
+For example, let $\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$. Then we have
+
+\begin{align*}
+T(\vec{x}) &= \begin{bmatrix}3 & -4 \\ 4 & 3 \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+		&\approx 5 \begin{bmatrix} \cos(53.1^\circ) & -\sin(53.1^\circ) \\ \sin(53.1^\circ) & \cos(53.1^\circ) \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} 
+\end{align*}
+
+This rotates L approximately $53.1^\circ$ and scales L by a factor of $5$.
+
+\includegraphics[scale=0.5, center]{Lrotscale345} 
+
+Thus we see that the linear transformation
+
+\begin{align*}
+T(\vec{x}) &= \begin{bmatrix}a & -b \\ b & a \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+		&= r \begin{bmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} 
+\end{align*}
+
+rotates L counterclockwise through $\theta$ degrees and scales L by a factor of $r$.
+
+\end{solution}
+
 \end{document}

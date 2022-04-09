@@ -24,8 +24,7 @@ def plotL(width, height, title, filename):
     plt.savefig(filename, bbox_inches='tight')
     plt.show()
 
-def transformL(width, height, transform, title, filename):
-    dim = max(width, height)
+def transformL(width, height, transform, dim, title, filename):
     origin = np.array([[0, 0], [0, 0]])
 
     V1 = np.array([width, 0])

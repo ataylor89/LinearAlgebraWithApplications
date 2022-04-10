@@ -1,5 +1,6 @@
 from transformL import transformL
 from transformL import plotL
+from plotvector import plotvector
 import math
 plotL(1, 2, 'The letter L', 'L.png')
 transformL(1, 2, [[0.5, 0], [0, 0.5]], 2, 'Scale L by 0.5', 'Lscalebyhalf.png')
@@ -12,3 +13,4 @@ transformL(1, 2, [[0, 0], [0, 1]], 2, 'Orthogonal projection of L onto the Y axi
 transformL(1, 2, [[math.cos(math.pi/3), -1 * math.sin(math.pi/3)], [math.sin(math.pi/3), math.cos(math.pi/3)]], 2, 'Rotate L sixty degrees counterclockwise', 'Lrot60.png')
 transformL(1, 2, [[3, -4], [4, 3]], 10, 'Multiply by the rotation matrix [[3, -4], [4, 3]]', 'Lrotscale345.png')
 transformL(1, 2, [[3, 1], [1, 2]], 4, 'L under T(x) = [[3, 1], [1, 2]] x', 'L3112.png')
+plotvector(4, 3, 0, 5, 0, 5, 'The vector [4, 3]', 'vector43.png')

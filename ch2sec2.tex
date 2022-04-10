@@ -513,4 +513,25 @@ T(\vec{x}) &=
 \end{align*}
 \end{solution}
 
+\begin{problem}
+Find the matrix of the orthogonal projection onto the line L spanned by the vector $\vec{w} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}$
+
+\includegraphics[scale=0.5, center]{vector43} 
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+\vectorproj[L]{\vec{x}} &= \frac{1}{w_{1}^2 + w_{2}^2} \begin{bmatrix} w_{1}^2 & w_{1}w_{2} \\ w_{1}w_{2} & w_{2}^2\end{bmatrix} \vec{x} \\
+&= \frac{1}{4^2 + 3^2} \begin{bmatrix} 4^2 & 4*3 \\ 4*3 & 3^2\end{bmatrix} \vec{x} \\
+&= \frac{1}{25} \begin{bmatrix} 16 & 12 \\ 12 & 9\end{bmatrix} \vec{x} \\
+&= \begin{bmatrix} \frac{16}{25} & \frac{12}{25} \\ \\ \frac{12}{25} & \frac{9}{25}\end{bmatrix} \vec{x} 
+\end{align*}
+
+Thus the matrix of the orthogonal projection onto the line spanned by $\vec{w}$ is
+
+\begin{align*}
+P &= \begin{bmatrix} \frac{16}{25} & \frac{12}{25} \\ \\ \frac{12}{25} & \frac{9}{25}\end{bmatrix}
+\end{align*}
+\end{solution}
+
 \end{document}

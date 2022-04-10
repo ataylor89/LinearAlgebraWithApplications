@@ -479,4 +479,38 @@ In the linear transformation $T(\vec{x})$, the vector $\vec{x}$ is reflected abo
 
 \end{solution}
 
+\begin{problem}
+Interpret the following linear transformation geometrically:
+
+\begin{align*}
+T(\vec{x}) =
+\begin{bmatrix}
+1 & 0 \\
+1 & 1
+\end{bmatrix} \vec{x}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The linear transformation is a vertical shear with $k = 1$. Recall that a vertical shear has a matrix of the form 
+
+\begin{align*}
+\begin{bmatrix}
+1 & 0 \\
+k & 1
+\end{bmatrix}
+\end{align*}
+
+We can apply the linear transformation $T : \mathbb{R}^2 \to \mathbb{R}^2$ to a vector $\vec{x} = \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}$.
+
+\begin{align*}
+T(\vec{x}) &=
+\begin{bmatrix}
+1 & 0 \\
+1 & 1
+\end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+&= \begin{bmatrix} x_{1} \\ x_{1} + x_{2} \end{bmatrix}
+\end{align*}
+\end{solution}
+
 \end{document}

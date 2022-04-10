@@ -534,4 +534,27 @@ P &= \begin{bmatrix} \frac{16}{25} & \frac{12}{25} \\ \\ \frac{12}{25} & \frac{9
 \end{align*}
 \end{solution}
 
+\begin{problem}
+Find the matrix of the reflection about the line spanned L by the vector $\vec{w} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}$
+
+\includegraphics[scale=0.5, center]{vector43} 
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+\vectorrefl[L]{\vec{x}} &= 2 \vectorproj[L]{\vec{x}} - \vec{x} \\
+&= 2 \begin{bmatrix} \frac{16}{25} & \frac{12}{25} \\ \\ \frac{12}{25} & \frac{9}{25}\end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} - \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+&= 2 \begin{bmatrix} \frac{16}{25}x_{1} + \frac{12}{25}x_{2} \\ \\ \frac{12}{25}x_{1} + \frac{9}{25}x_{2}\end{bmatrix} - \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+&= \begin{bmatrix} \frac{32}{25}x_{1} + \frac{24}{25}x_{2} \\ \\ \frac{24}{25}x_{1} + \frac{18}{25}x_{2}\end{bmatrix} - \begin{bmatrix} \frac{25}{25} x_{1} \\ \\ \frac{25}{25} x_{2} \end{bmatrix} \\
+&= \begin{bmatrix} \frac{7}{25}x_{1} + \frac{24}{25}x_{2} \\ \\ \frac{24}{25}x_{1} - \frac{7}{25}x_{2}\end{bmatrix} \\
+&= \begin{bmatrix} \frac{7}{25} & \frac{24}{25} \\ \\ \frac{24}{25} & -\frac{7}{25}\end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
+\end{align*}
+
+Thus the matrix of the reflection is 
+
+\begin{align*}
+P &= \begin{bmatrix} \frac{7}{25} & \frac{24}{25} \\ \\ \frac{24}{25} & -\frac{7}{25}\end{bmatrix}
+\end{align*}
+\end{solution}
+
 \end{document}

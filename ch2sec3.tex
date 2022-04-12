@@ -50,4 +50,38 @@ Calculate the matrix product
 \end{align*}
 \end{solution}
 
+\begin{problem}
+Compute the products BA and AB for 
+
+\begin{align*}
+A = \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}
+\end{align*}
+
+\begin{align*}
+B = \begin{bmatrix}-1 & 0 \\ 0 & 1 \end{bmatrix} 
+\end{align*}
+
+Interpret your answers geometrically, as composites of linear transformation.
+\end{problem}
+
+\begin{solution}
+
+\begin{align*}
+BA &= \begin{bmatrix}-1 & 0 \\ 0 & 1 \end{bmatrix} 
+\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} \\
+&= \begin{bmatrix}0 & -1 \\ 1 & 0 \end{bmatrix} 
+\end{align*}
+
+The product BA is a rotation matrix that rotates a vector ninety degrees counterclockwise.
+
+\begin{align*}
+AB &= \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} 
+\begin{bmatrix}-1 & 0 \\ 0 & 1 \end{bmatrix} \\
+&= \begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix} 
+\end{align*}
+
+The product AB is a rotation matrix that rotates a vector ninety degrees clockwise.
+
+\end{solution}
+
 \end{document}

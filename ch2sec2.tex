@@ -93,8 +93,8 @@ The matrix of the transformation is
 
 \begin{align*}
 \begin{bmatrix}
-0 & 1 \\ 
--1 & 0
+1 & 0 \\ 
+0 & -1
 \end{bmatrix}
 \end{align*}
 
@@ -464,7 +464,7 @@ T(\vec{x}) =
 \end{problem}
 
 \begin{solution}
-The matrix of the transformation represents a reflection. Recall that a reflection matrix is of the form 
+The matrix of the transformation represents a reflection. Recall that a matrix of the form
 
 \begin{align*}
 \begin{bmatrix}
@@ -473,10 +473,28 @@ b & -a
 \end{bmatrix}
 \end{align*}
 
-Here we have $\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ -1 \end{bmatrix}$ \\
+reflects a vector about a line. \\
 
-In the linear transformation $T(\vec{x})$, the vector $\vec{x}$ is reflected about the line spanned by the vector $\begin{bmatrix} 0 \\ -1 \end{bmatrix}$
+Since $a^2 + b^2 = 1$, it is a reflection without scaling. \\
 
+We can write the linear transformation as 
+
+\begin{align*}
+T(\vec{x}) =
+\begin{bmatrix}
+0 & -1 \\
+-1 & 0
+\end{bmatrix} \vec{x} = 
+\begin{bmatrix}
+T(\vec{e_{1}}) & T(\vec{e_{2}})
+\end{bmatrix} \vec{x}
+\end{align*}
+
+This tells us that $T(\vec{e_{1}}) = \begin{bmatrix} 0 \\ -1 \end{bmatrix}$ and $T(\vec{e_{2}}) = \begin{bmatrix} -1 \\ 0 \end{bmatrix}$. \\ 
+
+From this we can deduce that the linear transformation applies a reflection about the line $y = -x$, or about the vector $\vec{w} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$. \\
+
+First we established that the matrix of the transformation represents a reflection. Then we discovered that the matrix of the transformation represents a reflection about the line $y = -x$.
 \end{solution}
 
 \begin{problem}

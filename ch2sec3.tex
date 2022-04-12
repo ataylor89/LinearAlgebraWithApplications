@@ -65,6 +65,25 @@ Interpret your answers geometrically, as composites of linear transformation.
 \end{problem}
 
 \begin{solution}
+Let $T_{A}(\vec{x}) = A\vec{x}$ and $T_{B}(\vec{y}) = B\vec{y}$. We can write 
+
+\begin{align*}
+A &= \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} T_{A} (e_{1}) & T_{A} (e_{2}) \end{bmatrix} \\
+B &= \begin{bmatrix}-1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} T_{B} (e_{1}) & T_{B} (e_{2}) \end{bmatrix}
+\end{align*}
+
+Thus 
+
+\begin{align*}
+T_{A}(\vec{e_{1}}) &= \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \,T_{A}(\vec{e_{2}}) = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \\
+T_{B}(\vec{e_{1}}) &= \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \, T_{B}(\vec{e_{2}}) = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{align*}
+
+We see that $T_{A}$ is a reflection about the line $y = x$. In other words, $T_{A}$ is a reflection about the line spanned by the vector $\vec{w} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$. \\
+
+We see that $T_{B}$ is a reflection about the line $x = 0$. In other words, $T_{B}$ is a reflection about the line spanned by the vector $\vec{w} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$. \\
+
+Now let's compute the products BA and AB.
 
 \begin{align*}
 BA &= \begin{bmatrix}-1 & 0 \\ 0 & 1 \end{bmatrix} 

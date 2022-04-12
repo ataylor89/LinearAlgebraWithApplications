@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 2 Section 3}
+\author{Andrew Taylor}
+\date{April 11 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+
+\begin{document}
+\maketitle
+
+\begin{problem}
+Calculate the matrix product
+
+\begin{align*}
+\begin{bmatrix}
+6 & 7 \\
+8 & 9
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 \\
+3 & 5
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+\begin{bmatrix}
+6 & 7 \\
+8 & 9
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 \\
+3 & 5
+\end{bmatrix}
+&= 
+\begin{bmatrix}
+6*1 + 7*3 & 6*2 + 7*5 \\
+8*1 + 9*3 & 8*2 + 9*5
+\end{bmatrix} \\
+&= 
+\begin{bmatrix}
+27 & 47 \\
+35 & 61
+\end{bmatrix}
+\end{align*}
+\end{solution}
+
+\end{document}

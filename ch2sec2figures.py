@@ -1,5 +1,5 @@
-from transformL import transformL
-from transformL import plotL
+from plotL import transformL
+from plotL import plotL
 from plotvector import plotvector
 import math
 plotL(1, 2, 'The letter L', 'L.png')

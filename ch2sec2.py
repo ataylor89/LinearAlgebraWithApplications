@@ -1,41 +1,16 @@
-from matplotlib import pyplot as plt
-import numpy as np
+from plotL import transformL
+from plotL import plotL
+from plotvector import plotvector
 import math
-
-def plotL(u, v, xmin, xmax, ymin, ymax, title, filename):
-    origin = np.array([[0, 0], [0, 0]])
-    V = np.array([u, v])
-
-    fig, ax = plt.subplots()
-    ax.quiver(*origin, V[:,0], V[:,1], color=['blue'], angles='xy', scale_units='xy', scale=1)
-
-    plt.xlim(xmin, xmax)
-    plt.ylim(ymin, ymax)
-    plt.grid()
-    
-    plt.title(title,fontsize=10)
-    plt.savefig(filename, bbox_inches='tight')
-    # plot.show()
-
-def main():
-    U = np.array([0, 2])
-    V = np.array([1, 0])
-    plotL(U, V, -2, 2, -2, 2, "The letter L", "ch2sec2fig0.png")
-    angle = math.pi/4
-    angle2 = math.pi/2
-    angle3 = -1 * math.pi / 2
-    transforms = [
-        np.array([[0.5, 0], [0, 0.5]]),
-        np.array([[0, -1], [1, 0]]),
-        np.array([[-1, 0], [0, 1]]),
-        np.array([[1, 0], [0, -1]]),
-        np.array([[math.cos(angle), -1 * math.sin(angle)], [math.sin(angle), math.cos(angle)]]),
-        np.array([[math.cos(angle2), -1 * math.sin(angle2)], [math.sin(angle2), math.cos(angle2)]]),
-        np.array([[math.cos(angle3), -1 * math.sin(angle3)], [math.sin(angle3), math.cos(angle3)]])
-    ]
-    for i in range(len(transforms)):
-        transform = transforms[i]
-        plotL(np.matmul(transform, U), np.matmul(transform, V), -2, 2, -2, 2, "Transformation %d" %(i+1), "ch2sec2fig%d.png" %(i+1))
-
-if __name__ == '__main__':
-    main()
+plotL(1, 2, 'The letter L', 'L.png')
+transformL(1, 2, [[0.5, 0], [0, 0.5]], 2, 'Scale L by 0.5', 'Lscalebyhalf.png')
+transformL(1, 2, [[0, -1], [1, 0]], 2, 'Rotate L ninety degrees counterclockwise', 'Lrot90.png')
+transformL(1, 2, [[-1, 0], [0, 1]], 2, 'Reflect L about the Y axis', 'Lreflecty.png')
+transformL(1, 2, [[1, 0], [0, -1]], 2, 'Reflect L about the X axis', 'Lreflectx.png')
+transformL(1, 2, [[math.cos(math.pi/4), -1 * math.sin(math.pi/4)], [math.sin(math.pi/4), math.cos(math.pi/4)]], 2, 'Rotate L forty five degrees counterclockwise', 'Lrot45.png')
+transformL(1, 2, [[1, 0], [0, 0]], 2, 'Orthogonal projection of L onto the X axis', 'Lorthogonalprojx.png')
+transformL(1, 2, [[0, 0], [0, 1]], 2, 'Orthogonal projection of L onto the Y axis', 'Lorthogonalprojy.png')
+transformL(1, 2, [[math.cos(math.pi/3), -1 * math.sin(math.pi/3)], [math.sin(math.pi/3), math.cos(math.pi/3)]], 2, 'Rotate L sixty degrees counterclockwise', 'Lrot60.png')
+transformL(1, 2, [[3, -4], [4, 3]], 10, 'Multiply by the rotation matrix [[3, -4], [4, 3]]', 'Lrotscale345.png')
+transformL(1, 2, [[3, 1], [1, 2]], 4, 'L under T(x) = [[3, 1], [1, 2]] x', 'L3112.png')
+plotvector(4, 3, 0, 5, 0, 5, 'The vector [4, 3]', 'vector43.png')

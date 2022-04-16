@@ -36,4 +36,118 @@ To find the inverse of an $n \times n$ matrix A, form the $n \times (2n)$ matrix
 \end{itemize}
 \end{theorem}
 
+\begin{problem}
+Is the matrix
+
+\begin{align*}
+A = \begin{bmatrix}
+1 & 1 & 1 \\
+2 & 3 & 2 \\
+3 & 8 & 2
+\end{bmatrix}
+\end{align*}
+
+invertible? If so, find the inverse of $A$.
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+& \begin{bmatrix}
+1 & 1 & 1 \\
+2 & 3 & 2 \\
+3 & 8 & 2
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 0 \\
+0 & 5 & -1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+
+We see that 
+
+\begin{align*}
+rref(A) = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+
+Thus A is invertible. \\
+
+Note that $rref(A)$ is an acronym that refers to the reduced row echelon form of matrix A. The computation $rref(A)$ tells us whether A is invertible. \\
+
+To invert the matrix, let's calculate $rref \begin{bmatrix} A \ \vert \ I_{n} \end{bmatrix}$. \\
+
+\begin{align*}
+& \begin{bmatrix}
+1 & 1 & 1 & \vert & 1 & 0 & 0 \\
+2 & 3 & 2 & \vert & 0 & 1 & 0 \\
+3 & 8 & 2 & \vert & 0 & 0 & 1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 & \vert & 1 & 0 & 0 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 5 & -1 & \vert & -3 & 0 & 1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 & \vert & 1 & 0 & 0 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 0 & -1 & \vert & 7 & -5 & 1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 1 & \vert & 1 & 0 & 0 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 0 & 1 & \vert & -7 & 5 & -1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 1 & 0 & \vert & 8 & -5 & 1 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 0 & 1 & \vert & -7 & 5 & -1
+\end{bmatrix} \\
+& \begin{bmatrix}
+1 & 0 & 0 & \vert & 10 & -6 & 1 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 0 & 1 & \vert & -7 & 5 & -1
+\end{bmatrix} \\
+\end{align*}
+
+Thus 
+
+\begin{align*}
+rref \begin{bmatrix} A \ \vert \ I_{n} \end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & \vert & 10 & -6 & 1 \\
+0 & 1 & 0 & \vert & -2 & 1 & 0 \\
+0 & 0 & 1 & \vert & -7 & 5 & -1
+\end{bmatrix}
+\end{align*}
+
+and 
+
+\begin{align*}
+A^{-1} = \begin{bmatrix}
+10 & -6 & 1 \\
+-2 & 1 & 0 \\
+-7 & 5 & -1
+\end{bmatrix}
+\end{align*}
+
+\end{solution}
+
 \end{document}

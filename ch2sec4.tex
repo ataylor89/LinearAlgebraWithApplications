@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 2 Section 4}
+\author{Andrew Taylor}
+\date{April 16 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}
+An $n \times n$ matrix A is invertible if and only if
+
+\begin{align*}
+rref(A) = I_{n}
+\end{align*}
+
+or, equivalently, if
+
+\begin{align*}
+rank(A) = n
+\end{align*}
+
+\end{theorem}
+
+\begin{theorem}
+To find the inverse of an $n \times n$ matrix A, form the $n \times (2n)$ matrix $\begin{bmatrix} A \ \vert \ I_{n} \end{bmatrix}$ and compute $rref [A \ \vert \ I_{n}]$. 
+
+\begin{itemize}
+\item If $rref [A \ \vert \ I_{n}]$ is of the form $\begin{bmatrix} I_{n} \ \vert \ B \end{bmatrix}$ then A is invertible and $A^{-1} = B$.
+\item If $rref [A \ \vert \ I_{n}]$ is of another form (i.e., its left half fails to be $I_{n}$) then A is not invertible. 
+\end{itemize}
+\end{theorem}
+
+\end{document}

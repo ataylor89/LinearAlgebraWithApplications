@@ -205,4 +205,33 @@ Thus matrix B is invertible and $B^{-1} = CA$.
 
 \end{solution}
 
+\begin{problem}
+For an arbitrary $2 \times 2$ matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ compute the product $\begin{bmatrix}d & -b \\ -c & a \end{bmatrix} \begin{bmatrix}a & b \\ c & d \end{bmatrix}$. When is A invertible? If so, what is $A^{-1}$?
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+& \begin{bmatrix}d & -b \\ -c & a \end{bmatrix}
+\begin{bmatrix} a & b \\ c & d \end{bmatrix} \\
+&= \begin{bmatrix} ad - bc & 0 \\ 0 & ad - bc \end{bmatrix}
+\end{align*}
+
+When $ad - bc$ is nonzero, we can form the product
+
+\begin{align*}
+& \displaystyle \frac{1}{ad-bc} \begin{bmatrix}d & -b \\ -c & a \end{bmatrix}
+\begin{bmatrix} a & b \\ c & d \end{bmatrix} \\
+&= \displaystyle \frac{1}{ad-bc} \begin{bmatrix} ad - bc & 0 \\ 0 & ad - bc \end{bmatrix} \\
+&= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+\end{align*}
+
+Thus A is invertible when the determinant $ad - bc \neq 0$, and 
+
+\begin{align*}
+A^{-1} = \displaystyle \frac{1}{ad-bc} \begin{bmatrix}d & -b \\ -c & a \end{bmatrix}
+\end{align*}
+
+\end{solution}
+
+
 \end{document}

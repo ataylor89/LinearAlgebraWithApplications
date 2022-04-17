@@ -36,6 +36,32 @@ To find the inverse of an $n \times n$ matrix A, form the $n \times (2n)$ matrix
 \end{itemize}
 \end{theorem}
 
+\begin{theorem}
+For an invertible $n \times n$ matrix A, 
+
+\begin{align*}
+A^{-1} A = I_{n} \quad \textrm{and} \quad AA^{-1} = I_{n}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}
+If A and B are invertible $n \times n$ matrices, then BA is invertible as well, and 
+
+\begin{align*}
+(BA)^{-1} = A^{-1} B^{-1}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}
+Let A and B be two $n \times n$ matrices such that $BA = I_{n}$. Then
+
+\begin{itemize}
+\item A and B are both invertible
+\item $A^{-1} = B$ and $B^{-1} = A$
+\item $AB = I_{n}$
+\end{itemize}
+\end{theorem}
+
 \begin{problem}
 Is the matrix
 
@@ -147,6 +173,35 @@ A^{-1} = \begin{bmatrix}
 -7 & 5 & -1
 \end{bmatrix}
 \end{align*}
+
+\end{solution}
+
+\begin{problem}
+Suppose A, B, and C are three $n \times n$ matrices such that $ABC = I_{n}$. Show that B is invertible, and express $B^{-1}$ in terms of A and C.
+\end{problem}
+
+\begin{solution}
+By the associative property of matrices
+
+\begin{align*}
+ABC &= I_{n} \\
+(AB)C &= I_{n} \\
+A(BC) &= I_{n} 
+\end{align*}
+
+Thus matrices A and C are invertible. 
+
+\begin{align*}
+ABC &= I_{n} \\
+A^{-1}ABC &= A^{-1} I_{n} \\
+BC &= A^{-1} \\
+%BCC^{-1} &= A^{-1} I_{n} C^{-1} \\
+%B &= A^{-1} C^{-1} \\
+BCA &= A^{-1} A \\
+B(CA) &= I_{n}
+\end{align*}
+
+Thus matrix B is invertible and $B^{-1} = CA$.
 
 \end{solution}
 

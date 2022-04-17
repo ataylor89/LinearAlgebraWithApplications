@@ -253,4 +253,23 @@ The quantity $\lvert \det A \rvert$ is the area of the shaded parallelogram cons
 
 \end{solution}
 
+\begin{problem}
+For which values of the constant k is the matrix $A = \begin{bmatrix} 1-k & 2 \\ 4 & 3-k \end{bmatrix}$ invertible?
+\end{problem}
+
+\begin{solution}
+The matrix A is invertible when $\det A$ is nonzero.
+
+\begin{align*}
+\det A &= (1-k)(3-k) - 2*4 \\
+&= 3 - 4k+ k^2 - 8 \\
+&= k^2 - 4k - 5 \\
+&= (k - 5)(k + 1)
+\end{align*} 
+
+The matrix A is invertible when $k \neq 5$ and when $k \neq -1$. \\
+
+In other words, A is invertible for all values of k except $k = 5$ and $k = -1$.
+\end{solution}
+
 \end{document}

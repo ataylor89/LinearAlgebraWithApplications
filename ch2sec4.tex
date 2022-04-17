@@ -272,4 +272,64 @@ The matrix A is invertible when $k \neq 5$ and when $k \neq -1$. \\
 In other words, A is invertible for all values of k except $k = 5$ and $k = -1$.
 \end{solution}
 
+\begin{problem}
+Consider a matrix A that represents the reflection about a line L in the plane. Use the determinant to verify that A is invertible. Find $A^{-1}$. Explain your answer conceptually, and interpret the determinant geometrically.
+\end{problem}
+
+\begin{solution}
+Since A is a reflection matrix, we know that A is of the form
+
+\begin{align*}
+\begin{bmatrix}
+a & b \\ b & -a
+\end{bmatrix}
+\end{align*}
+
+We can calculate the determinant of A.
+
+\begin{align*}
+\det A &= -a^2 - b^2 \\
+&= -(a^2 + b^2)
+\end{align*}
+
+Since the determinant is only zero when $a = b = 0$, we can say that $A$ is invertible for all values except $a = b = 0$.
+
+\begin{align*}
+A^{-1} &= \displaystyle -\frac{1}{a^2+b^2} \begin{bmatrix}-a & -b \\ -b & a \end{bmatrix} \\
+&= \displaystyle \frac{1}{a^2+b^2} \begin{bmatrix}a & b \\ b & -a \end{bmatrix}
+\end{align*}
+
+Strictly speaking, a reflection matrix is of the form 
+
+\begin{align*}
+\begin{bmatrix}a & b \\ b & -a\end{bmatrix}
+\end{align*}
+
+where $a^2 + b^2 = 1$. So we can substitute $a^2+b^2 = 1$ into our inverse. We can also assume that the determinant is nonzero since $a^2+b^2 = 1$. Thus every reflection matrix is invertible.
+
+\begin{align*}
+A^{-1} &= \displaystyle \frac{1}{a^2+b^2} \begin{bmatrix}a & b \\ b & -a \end{bmatrix} \\
+&= \displaystyle \frac{1}{1} \begin{bmatrix}a & b \\ b & -a \end{bmatrix} \\
+&= \begin{bmatrix}a & b \\ b & -a \end{bmatrix} \\
+&= A
+\end{align*}
+
+We find that every reflection matrix A is invertible, and that $A^{-1} = A$. \\
+
+The determinant of A is actually the area of a unit square. Let $\vec{v} = \begin{bmatrix} a \\ b \end{bmatrix}$ and $\vec{w} = \begin{bmatrix} b \\ -a \end{bmatrix}$. The vectors $\vec{v}$ and $\vec{w}$ form a parallelogram, and this parallelogram is a unit square. \\
+
+We can write the determinant as
+
+\begin{align*}
+\det A &= \lVert \vec{v} \rVert \sin \theta \lVert \vec{w} \rVert \\
+&= \lVert \sqrt{a^2+b^2} \rVert \sin \left(\displaystyle -\frac{\pi}{2}\right) \lVert \sqrt{b^2 + (-a)^2} \rVert \\
+&= -1
+\end{align*}
+
+where $\theta$ is the angle between vectors $\vec{v}$ and $\vec{w}$. \\
+
+In summary, every reflection matrix A is invertible, since $\det A = -1$ for all reflection matrices. The inverse of a reflection matrix A is $A^{-1} = A$. The determinant of a reflection matrix is the area of a unit square formed by the two column vectors of the reflection matrix. This area is negative because the angle between the vectors $\left(\displaystyle -\frac{\pi}{2}\right)$ is negative.
+
+\end{solution}
+
 \end{document}

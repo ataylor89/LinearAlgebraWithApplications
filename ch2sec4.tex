@@ -332,4 +332,70 @@ In summary, every reflection matrix A is invertible, since $\det A = -1$ for all
 
 \end{solution}
 
+\begin{problem}
+Let A be a block matrix
+
+\begin{align*}
+A = \begin{bmatrix} A_{11} & A_{12} \\ 0 & A_{22} \end{bmatrix}
+\end{align*}
+
+where $A_{11}$ is an $n \times n$ matrix, $A_{22}$ is an $m \times m$ matrix, and $A_{12}$ is an $n \times m$ matrix. \\
+
+\begin{itemize}
+\item For which choices of $A_{11}$, $A_{12}$, and $A_{22}$ is A invertible?
+\item If A is invertible, what is $A^{-1}$ (in terms of $A_{11}$, $A_{12}$, $A_{22}$)?
+\end{itemize}
+
+\end{problem}
+
+\begin{solution}
+We are looking for a matrix B such that
+
+\begin{align*}
+BA = I_{n + m} = \begin{bmatrix} I_{n} & 0 \\ 0 & I_{m} \end{bmatrix}
+\end{align*}
+
+Let us partition B in the same way as A.
+
+\begin{align*}
+B = \begin{bmatrix} B_{11} & B_{12} \\ B_{21} & B_{22} \end{bmatrix}
+\end{align*}
+
+where $B_{11}$ is $n \times n$, $B_{12}$ is $m \times m$, and so on. We know that 
+
+\begin{align*}
+\begin{bmatrix} B_{11} & B_{12} \\ B_{21} & B_{22} \end{bmatrix} \begin{bmatrix} A_{11} & A_{12} \\ 0 & A_{22} \end{bmatrix} = \begin{bmatrix} I_{n} & 0 \\ 0 & I_{m} \end{bmatrix}
+\end{align*}
+
+Thus
+
+\begin{align*}
+B_{11} A_{11} &= I_{n} \\
+B_{11} A_{12} + B_{12} A_{22} &= 0 \\
+B_{21} A_{11} + B_{22} 0 &= 0 \\
+B_{21} A_{12} + B_{22} A_{22} &= I_{m}
+\end{align*}
+
+This gives us
+
+\begin{align*}
+B_{11} &= A_{11}^{-1} \\
+B_{12} & = - A_{11}^{-1} A_{12} A_{22}^{-1} \\
+B_{21} &= 0 \\
+B_{22} &= A_{22}^{-1}
+\end{align*}
+
+We find that A is invertible when $A_{11}$ and $A_{22}$ are invertible. \\
+
+When A is invertible, the inverse of A is given by
+
+\begin{align*}
+B = A^{-1} = \begin{bmatrix}
+A_{11}^{-1} & -A_{11}^{-1} A_{12} A_{22}^{-1} \\ \\
+0 & A_{22}^{-1}
+\end{bmatrix}
+\end{align*}
+
+\end{solution}
+
 \end{document}

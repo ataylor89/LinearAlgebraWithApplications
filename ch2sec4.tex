@@ -398,4 +398,96 @@ A_{11}^{-1} & -A_{11}^{-1} A_{12} A_{22}^{-1} \\ \\
 
 \end{solution}
 
+\begin{problem}
+Verify this result for the following example:
+
+\begin{align*}
+& \left(
+\begin{array}{@{}cc|ccc@{}}
+1 & 1 & 1 & 2 & 3 \\
+1 & 2 & 4 & 5 & 6 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right)^{-1} =
+\left(
+\begin{array}{@{}cc|ccc@{}}
+2 & -1 & 2 & 1 & 0 \\
+-1 & 1 & -3 & -3 & -3 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right) 
+\end{align*}
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+& \left(
+\begin{array}{@{}cc|ccc@{}}
+1 & 1 & 1 & 2 & 3 \\
+1 & 2 & 4 & 5 & 6 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right)
+\left(
+\begin{array}{@{}cc|ccc@{}}
+2 & -1 & 2 & 1 & 0 \\
+-1 & 1 & -3 & -3 & -3 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right) \\
+&= \left( \begin{array}{@{}c|c@{}}
+\begin{bmatrix}1 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix}2 & -1 \\ -1 & 1 \end{bmatrix} + \begin{bmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix}0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}
+& \begin{bmatrix}1 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 2 &1 & 0 \\ -3 & -3 & -3 \end{bmatrix} + \begin{bmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}  \\ \hline
+\begin{bmatrix}0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix} & \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\end{array} \right) \\
+&= \left( \begin{array}{@{}c|c@{}}
+\begin{bmatrix}1 & 0 \\ 0 & 1 \end{bmatrix} + \begin{bmatrix}0 & 0 \\ 0 & 0 \end{bmatrix} & \begin{bmatrix} -1 &-2 & -3 \\ -4 & -5 & -6 \end{bmatrix} + \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \\ \hline
+\begin{bmatrix}0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix} & \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\end{array} \right) \\
+&= \left( \begin{array}{@{}c|c@{}}
+\begin{bmatrix}1 & 0 \\ 0 & 1 \end{bmatrix}  & \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}  \\ \hline
+\begin{bmatrix}0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix} & \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\end{array} \right) \\
+&= \left( \begin{array}{@{}cc|ccc@{}}
+1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 
+\end{array} \right)
+\end{align*}
+
+Since the product of the two matrices is $I_{5}$, the identity matrix, we know that
+
+\begin{align*}
+\left(
+\begin{array}{@{}cc|ccc@{}}
+1 & 1 & 1 & 2 & 3 \\
+1 & 2 & 4 & 5 & 6 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right)^{-1} =
+\left(
+\begin{array}{@{}cc|ccc@{}}
+2 & -1 & 2 & 1 & 0 \\
+-1 & 1 & -3 & -3 & -3 \\ \hline
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right) 
+\end{align*}
+
+\end{solution}
+
 \end{document}

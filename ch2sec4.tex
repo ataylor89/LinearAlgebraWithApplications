@@ -564,7 +564,54 @@ Thus the matrix is invertible.
 \begin{bmatrix}0 & 2 \\ 1 & 1\end{bmatrix}^{-1} &= \displaystyle\frac{1}{-2} \begin{bmatrix}1 & -2 \\ -1 & 0\end{bmatrix} \\
 &= \begin{bmatrix} -0.5 & 1 \\ 0.5 & 0\end{bmatrix}
 \end{align*}
+\end{solution}
 
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 2 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+& \det \begin{bmatrix}
+1 & 2 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1
+\end{bmatrix} \\
+&= 1 * \det \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix} - 2 \det \begin{bmatrix}0 & 2 \\ 0 & 1\end{bmatrix} + 3 \det \begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix} \\
+&= 1 - 0 + 0 \\
+&= 1
+\end{align*}
+
+The determinant of the matrix is 1, thus the matrix is invertible. \\
+
+Let's find the inverse using elementary row operations. \\
+
+\begin{align*}
+\left( \begin{array}{@{}ccc|ccc@{}}
+1 & 2 & 3 & 1 & 0 & 0 \\ 0 & 1 & 2 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 0 & 1
+\end{array} \right) \\
+\left( \begin{array}{@{}ccc|ccc@{}}
+1 & 0 & -1 & 1 & -2 & 0 \\ 0 & 1 & 2 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 0 & 1
+\end{array} \right) \\
+\left( \begin{array}{@{}ccc|ccc@{}}
+1 & 0 & 0 & 1 & -2 & 1 \\ 0 & 1 & 2 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 0 & 1
+\end{array} \right) \\
+\left( \begin{array}{@{}ccc|ccc@{}}
+1 & 0 & 0 & 1 & -2 & 1 \\ 0 & 1 & 0 & 0 & 1 & -2 \\ 0 & 0 & 1 & 0 & 0 & 1
+\end{array} \right)
+\end{align*}
+
+The inverse of the matrix is 
+
+\begin{align*}
+\begin{bmatrix}
+1 & 2 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1
+\end{bmatrix}^{-1} = \begin{bmatrix}
+1 & -2 & 1 \\ 0 & 1 & -2 \\ 0 & 0 & 1
+\end{bmatrix}
+\end{align*}
 
 \end{solution}
 

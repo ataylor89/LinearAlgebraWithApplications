@@ -615,4 +615,27 @@ The inverse of the matrix is
 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 2 & 2 \\ 1 & 3 & 1 \\ 1 & 1 & 3
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+& \det \begin{bmatrix}
+1 & 2 & 2 \\ 1 & 3 & 1 \\ 1 & 1 & 3
+\end{bmatrix} \\
+&= 1 * \det \begin{bmatrix}3 & 1 \\ 1 & 3\end{bmatrix} - 2 \det \begin{bmatrix}1 & 1 \\ 1 & 3\end{bmatrix} + 2 \det \begin{bmatrix}1 & 3 \\ 1 & 1\end{bmatrix} \\
+&= (9-1) - 2(3-1) + 2(1-3) \\
+&= 8 - 4 + -4 \\
+&= 0
+\end{align*}
+
+The determinant of the matrix is zero, so the matrix is not invertible.
+
+\end{solution}
+
 \end{document}

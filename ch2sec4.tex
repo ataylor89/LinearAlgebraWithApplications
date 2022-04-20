@@ -8,6 +8,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
+\newcommand{\rref}[1]{\mathrm{rref \, #1}}
 
 \begin{document}
 \maketitle
@@ -702,5 +703,96 @@ We can verify this result by multiplying the two matrices.
 \end{align*}
 
 \end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 2 \\
+0 & 0 & 3
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let
+
+\begin{align*}
+A = \begin{bmatrix}1 & 2 & 3 \\ 0 & 0 & 2 \\ 0 & 0 & 3 \end{bmatrix}
+\end{align*}
+
+We can determine whether A is invertible by calculating its reduced row echelon form, $\rref{A}$.
+
+\begin{align*}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 2 \\
+0 & 0 & 3 
+\end{bmatrix} \\
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 3 \\
+0 & 0 & 3 
+\end{bmatrix} \\
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 3 \\
+0 & 0 & 0 
+\end{bmatrix} \\
+\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 3 \\
+0 & 0 & 0 
+\end{bmatrix} \\
+\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 
+\end{bmatrix} 
+\end{align*}
+
+Thus
+
+\begin{align*}
+\rref{A} = \begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 
+\end{bmatrix} 
+\end{align*}
+
+The matrix A is not invertible since $\rref A \neq I_{3}$.
+
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 1 & 1 \\
+1 & 2 & 3 \\
+1 & 3 & 6
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{bmatrix}
+\end{align*}
+\end{problem}
 
 \end{document}

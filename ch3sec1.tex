@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 3 Section 1}
+\author{Andrew Taylor}
+\date{April 23 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newcommand{\rref}[1]{\mathrm{rref \, #1}}
+
+\begin{document}
+\maketitle
+
+\begin{problem}
+Find the kernel of the linear transformation 
+
+\begin{align*}
+T(\vec{x}) = \begin{bmatrix}1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix} \vec{x}
+\end{align*}
+
+from $\mathbb{R}^3$ to $\mathbb{R}^2$.
+
+\end{problem}
+
+\begin{solution}
+Let's solve the linear system $T(\vec{x}) = 0$ to get the kernel of T.
+
+\begin{align*}
+& \left( \begin{array}{@{}ccc|c@{}}
+1 & 1 & 1 & 0 \\
+1 & 2 & 3 & 0
+\end{array} \right)
+& \left( \begin{array}{@{}ccc|c@{}}
+1 & 1 & 1 & 0 \\
+0 & 1 & 2 & 0
+\end{array} \right) \\
+& \left( \begin{array}{@{}ccc|c@{}}
+1 & 0 & -1 & 0 \\
+0 & 1 & 2 & 0
+\end{array} \right) \\
+\end{align*}
+
+This tells us that $x_{1} = x_{3}$ and $x_{2} = -2x_{3}$. \\
+
+Let $t = x_{3}$ be an arbitrary real number. Then the solutions to the linear system are
+
+\begin{align*}
+\ker(T) = \begin{bmatrix} t \\ -2t \\ t \end{bmatrix} = t \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}
+\end{align*}
+
+The kernel of T is the line spanned by the vector $\vec{v} = \begin{bmatrix}1 \\ -2 \\ 1\end{bmatrix}$.
+
+\end{solution}
+
+\end{document}

@@ -9,6 +9,7 @@
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
 \newcommand{\rref}[1]{\mathrm{rref \, #1}}
+\DeclareMathOperator{\Span}{span}
 
 \begin{document}
 \maketitle
@@ -51,6 +52,117 @@ Let $t = x_{3}$ be an arbitrary real number. Then the solutions to the linear sy
 \end{align*}
 
 The kernel of T is the line spanned by the vector $\vec{v} = \begin{bmatrix}1 \\ -2 \\ 1\end{bmatrix}$.
+
+\end{solution}
+
+\begin{problem}
+Find the kernel of the linear transformation 
+
+\begin{align*}
+T(\vec{x}) = A\vec{x} =
+\begin{bmatrix}
+1 & 2 & 2 & -5 & 6 \\ 
+-1 & -2 & -1 & 1 & -1 \\
+4 & 8 & 5 & -8 & 9 \\ 
+3 & 6 & 1 & 5 & -7 
+\end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \end{bmatrix}
+\end{align*}
+
+from $\mathbb{R}^5$ to $\mathbb{R}^4$.
+
+\end{problem}
+
+\begin{solution}
+Let's solve the linear system $T(\vec{x}) = Ax = 0$. \\
+
+We can solve this linear system by creating the augmented matrix $\begin{bmatrix}A & \vert & \vec{0} \end{bmatrix}$ and calculating $\rref{\begin{bmatrix}A & \vert & \vec{0} \end{bmatrix}}$.
+
+\begin{align*}
+&\left( \begin{array}{@{}ccccc|c@{}}
+1 & 2 & 2 & -5 & 6 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+4 & 8 & 5 & -8 & 9 & 0 \\ 
+3 & 6 & 1 & 5 & -7 & 0 
+\end{array} \right) \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+4 & 8 & 5 & -8 & 9 & 0 \\ 
+3 & 6 & 1 & 5 & -7 & 0 
+\end{array} \right) \textrm{Adding row2 to row1} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+3 & 6 & 1 & 5 & -7 & 0 
+\end{array} \right) \textrm{Adding row2 to row1} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 0 & 0 & 0 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+3 & 6 & 1 & 5 & -7 & 0 
+\end{array} \right) \textrm{Subtracting row3 from row1} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 0 & 0 & 0 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+0 & 0 & -2 & 8 & -10 & 0 
+\end{array} \right) \textrm{Adding row2 to row4} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 0 & 0 & 0 & 0 \\ 
+-1 & -2 & -1 & 1 & -1 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 
+\end{array} \right) \textrm{Adding row2 to row4} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+0 & 0 & 0 & 0 & 0 & 0 \\ 
+-1 & -2 & 0 & -3 & 4 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 
+\end{array} \right) \textrm{Adding row3 to row2} \\
+&\left( \begin{array}{@{}ccccc|c@{}}
+1 & 2 & 0 & 3 & -4 & 0 \\
+0 & 0 & 1 & -4 & 5 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\ 
+\end{array} \right) \textrm{Swapping rows and multiplying row1 by -1} \\
+\end{align*}
+
+\begin{align*}
+x_{1} + 2x_{2} + 3x_{4} - 4x_{5} = 0 \\
+x_{3} - 4x_{4} + 5x_{5} = 0 \\
+\end{align*}
+
+\begin{align*}
+x_{1} &= -2x_{2} - 3x_{4} + 4x_{5} \\
+x_{3} &= 4x_{4} - 5x_{5}
+\end{align*}
+
+Let $r = x_{2}$, let $s = x_{4}$, let $t = x_{5}$. \\
+
+Then the solutions to the linear system (the kernel) are of the form:
+
+\begin{align*}
+\ker(T) &= \begin{bmatrix}
+-2r - 3s + 4t \\
+r \\
+4s - 5t \\
+s \\
+t
+\end{bmatrix} \\
+&=
+\begin{bmatrix} -2r \\ r \\ 0 \\ 0 \\ 0 \end{bmatrix} +
+\begin{bmatrix} -3s \\ 0 \\ 4s \\ s \\ 0 \end{bmatrix} +
+\begin{bmatrix} 4t \\ 0 \\ -5t \\ 0 \\ t \end{bmatrix} \\
+&=
+r \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} +
+s \begin{bmatrix} -3 \\ 0 \\ 4 \\ 1 \\ 0 \end{bmatrix} +
+t \begin{bmatrix} 4 \\ 0 \\ -5 \\ 0 \\ 1 \end{bmatrix} \\
+&=
+\Span \left( \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} -3 \\ 0 \\ 4 \\ 1 \\ 0 \end{bmatrix},
+\begin{bmatrix} 4 \\ 0 \\ -5 \\ 0 \\ 1 \end{bmatrix} \right)
+\end{align*}
 
 \end{solution}
 

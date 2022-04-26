@@ -213,4 +213,27 @@ A = \begin{bmatrix}1 & 2 & 3 \end{bmatrix}
 \end{align*}
 \end{problem}
 
+\begin{problem}
+Let's solve the equation
+\begin{align*}
+x_{1} + 2x_{2} + 3x_{3} = 0
+\end{align*}
+
+From inspection, we can find two nonparallel vectors in the solution set, the vectors 
+\begin{align*}
+\vec{v_{1}} = \begin{bmatrix}1 \\ 1 \\ -1\end{bmatrix} \vec{v_{2}} = \begin{bmatrix}-1 \\ 2 \\ -1\end{bmatrix}
+\end{align*}
+
+There is no constant $c$ such that $\vec{v_{2}} = c\vec{v_{1}}$, thus the two vectors are linearly independent and form a basis for the kernel. \\
+
+Thus the kernel of A is the plane through the origin spanned by the vectors $\vec{v_{1}}$ and $\vec{v_{2}}$.
+
+\begin{align*}
+\ker A = \Span \left( \begin{bmatrix}1 \\ 1 \\ -1\end{bmatrix}, \begin{bmatrix}-1 \\ 2 \\ -1\end{bmatrix} \right)
+\end{align*}
+
+The image of A is $\mathbb{R}$, since for any $y \in \mathbb{R}$, we have the solution $\vec{x} = \begin{bmatrix} y \\ 0 \\ 0 \end{bmatrix}$.
+
+\end{problem}
+
 \end{document}

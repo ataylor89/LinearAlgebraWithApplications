@@ -183,4 +183,28 @@ For which $n \times m$ matrices is $\ker A = \{\vec{0}\}$. Give your answer in t
 Let $A$ be a $n \times m$ matrix. When $\Rank A = m$, we get the unique solution $\vec{x} = \vec{0}$. Thus $\ker A = \{ \vec{0} \}$ when $\Rank A = m$.
 \end{solution}
 
+In the following problems, find vectors that span the kernel of A and the image of A. 
+
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 2 \\ 3 & 4 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let $T(\vec{x}) = A\vec{x}$. Let's solve the equation $A\vec{x} = \vec{0}$.
+\begin{align*}
+&\left[\begin{array}{cc|c}1 & 2 & 0 \\ 3 & 4 & 0\end{array}\right] \\
+&\left[\begin{array}{cc|c}1 & 2 & 0 \\ 0 & -2 & 0\end{array}\right] \\
+&\left[\begin{array}{cc|c}1 & 0 & 0 \\ 0 & -2 & 0\end{array}\right] \\
+&\left[\begin{array}{cc|c}1 & 0 & 0 \\ 0 & 1 & 0\end{array}\right]
+\end{align*}
+
+The solution set is $\vec{x} = \vec{0}$, thus $\ker A = \{0\}$. \\
+
+The kernel of A is spanned by the zero vector. The image of A is the span of the column vectors $\begin{bmatrix}1 \\ 3 \end{bmatrix}$ and $\begin{bmatrix}2 \\ 4 \end{bmatrix}$. \\
+
+In other words, $T(\vec{x}) = x_{1} \begin{bmatrix}1 \\ 3 \end{bmatrix} + x_{2} \begin{bmatrix}2 \\ 4 \end{bmatrix}$.
+\end{solution}
+
 \end{document}

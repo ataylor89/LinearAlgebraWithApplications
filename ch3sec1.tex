@@ -10,6 +10,7 @@
 \newtheorem*{solution}{Solution}
 \newcommand{\rref}[1]{\mathrm{rref \, #1}}
 \DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Rank}{rank}
 
 \begin{document}
 \maketitle
@@ -172,6 +173,14 @@ For an invertible $n \times n$ matrix find $\ker A$.
 
 \begin{solution}
 Let $T(\vec{x}) = A\vec{x}$ be a linear transformation with an invertible $n \times n$ matrix A. We know that T is invertible because A is invertible. Thus there can only be one unique solution to the equation $A\vec{x} = 0$. Since $\vec{x} = \vec{0}$ is the unique solution, we know that $\ker A = \{\vec{0}\}$.
+\end{solution}
+
+\begin{problem}
+For which $n \times m$ matrices is $\ker A = \{\vec{0}\}$. Give your answer in terms of the rank of $A$.
+\end{problem}
+
+\begin{solution}
+Let $A$ be a $n \times m$ matrix. When $\Rank A = m$, we get the unique solution $\vec{x} = \vec{0}$. Thus $\ker A = \{ \vec{0} \}$ when $\Rank A = m$.
 \end{solution}
 
 \end{document}

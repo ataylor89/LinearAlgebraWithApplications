@@ -316,4 +316,46 @@ The image of A is a plane spanned by the above vectors that passes through the o
 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let's solve the linear system $A\vec{x} = 0$.
+
+\begin{align*}
+\left[ \begin{array}{ccc|c}1 & 1 & 1 & 0 \\ 1 & 2 & 3 & 0 \end{array} \right] \\
+\left[ \begin{array}{ccc|c}1 & 1 & 1 & 0 \\ 0 & 1 & 2 & 0 \end{array} \right] \\
+\left[ \begin{array}{ccc|c}1 & 0 & -1 & 0 \\ 0 & 1 & 2 & 0 \end{array} \right] \\
+\end{align*}
+
+This gives us the equations 
+
+\begin{align*}
+& x_{1} = x_{3} \\
+& x_{2} = -2x_{3}
+\end{align*}
+
+Let $t$ be an arbitrary real number. Then we can write the kernel of A as
+
+\begin{align*}
+\ker A &= \Bigg\{ \begin{bmatrix} t \\ -2t \\ t \end{bmatrix} \Bigg\} \\
+&= \Bigg\{ t \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \Bigg\} \\
+&= \Span \left( \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \right)
+\end{align*}
+
+Thus the kernel of A is the line spanned by the vector $\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}.$ \\
+
+In our matrix A, the third column vector is redundant. Thus 
+
+\begin{align*}
+\im A = \Span \left( \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 2  \end{bmatrix} \right)
+\end{align*} 
+
+The image of A is a plane that passes through the origin.
+
+\end{solution}
+
 \end{document}

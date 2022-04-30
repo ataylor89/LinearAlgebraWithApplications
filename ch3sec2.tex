@@ -24,4 +24,46 @@ Is $W = \Bigg \{ \begin{bmatrix} x \\ y \end{bmatrix}$ in $\mathbb{R}^2$: $x \ge
 W contains the zero vector and is closed under addition. But W is not closed under scalar multiplication. Therefore W is not a subspace of $\mathbb{R}^2$.
 \end{solution}
 
+\begin{problem}
+Show that the only subspaces of $\mathbb{R}^2$ are $\mathbb{R}^2$ itself, the set $\{ \vec{0} \}$, and any of the lines through the origin.
+\end{problem}
+
+\begin{solution}
+Let W be a subspace of $\mathbb{R}^2$ that is neither a line through the origin nor the set $\{ \vec{0} \}$. Then we can choose two nonparallel vectors $\vec{v} = \begin{bmatrix} v_{1} \\ v_{2} \end{bmatrix}$ and $\vec{w} = \begin{bmatrix} w_{1} \\ w_{2} \end{bmatrix}$ from our subspace W.  Let $\vec{u} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix}$ be a vector in $\mathbb{R}^2$. We will show that we can write $\vec{u}$ as a linear combination of $\vec{v}$ and $\vec{w}$. \\
+
+If $\vec{u}$ can be written as a linear combination of $\vec{v}$ and $\vec{w}$, then there are solutions to the equation
+
+\begin{align*}
+x_{1} \vec{v} + x_{2} \vec{w} = \vec{u}
+\end{align*}
+
+where $x_{1}$ and $x_{2}$ are real numbers. We can write this equation in matrix form
+
+\begin{align*}
+\begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix} 
+\end{align*}
+
+This equation has solutions when $A = \begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix}$ is invertible. We know that A is invertible when $\det A$ is nonzero. \\
+
+There exist real numbers $c_{1}$ and $c_{2}$ such that $c_{1} v_{1} = w_{1}$ and $c_{2} v_{2} = w_{2}$. We know that $c_{1} \neq c_{2}$ since the two vectors are not parallel (or else one vector would be a scalar multiple of the other. We can substitute these expressions when we calculate the determinant of A.
+
+\begin{align*}
+\det A &= v_{1} w_{2} - v_{2} w_{1} \\
+&= v_{1} (c_{2} v_{2}) - v_{2} (c_{1} v_{1}) \\
+&= c_{2} v_{1} v_{2} - c_{1} v_{1} v_{2} \\
+&= v_{1} v_{2}  (c_{2} - c_{1}) \neq 0
+\end{align*} 
+
+We have shown that the determinant of A is not zero, since $c_{2} \neq c_{1}$. Therefore A is invertible, and the equation 
+
+\begin{align*}
+x_{1} \vec{v} + x_{2} \vec{w} = \vec{u}
+\end{align*}
+
+has solutions for $x_{1}$ and $x_{2}$. \\
+
+Since W is closed under linear combinations, the vector $\vec{u}$ has to be in the subspace W. This means that every real number is contained in W, so $W = \mathbb{R}^2$.
+
+\end{solution}
+
 \end{document}

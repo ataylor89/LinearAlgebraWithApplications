@@ -541,4 +541,47 @@ The kernel (above) can be interpreted geometrically as a line.
 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 0 & 1 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let's solve the linear system $A\vec{x} = \vec{0}$.
+
+\begin{align*}
+\left( \begin{array}{cccc|c}1 & 2 & 3 & 4 & 0 \\ 0 & 1 & 2 & 3 & 0 \\ 0 & 0 & 0 & 1 & 0 \end{array} \right) \\
+\left( \begin{array}{cccc|c}1 & 2 & 3 & 0 & 0 \\ 0 & 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 \end{array} \right) \\
+\left( \begin{array}{cccc|c}1 & 0 & -1 & 0 & 0 \\ 0 & 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 \end{array} \right)
+\end{align*}
+
+This gives us the equations
+
+\begin{align*}
+x_{1} = x_{3} \\
+x_{2} = -2x_{3} \\
+x_{4} = 0
+\end{align*}
+
+Thus the solutions are
+
+\begin{align*}
+\ker A &= \begin{bmatrix}
+t \\ -2t \\ t \\ 0
+\end{bmatrix} \\
+&= t \begin{bmatrix}
+1 \\ -2 \\ 1 \\ 0
+\end{bmatrix} \\
+&= \Span \begin{bmatrix}
+1 \\ -2 \\ 1 \\ 0
+\end{bmatrix}
+\end{align*}
+
+The kernel of A is a line that passes through the origin.
+
+\end{solution}
+
+
+
 \end{document}

@@ -439,7 +439,7 @@ A = \begin{bmatrix}1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}
 \end{problem}
 
 \begin{solution}
-We can solve the linear system $Ax = 0$ with elementary row operations on an augmented matrix.
+We can solve the linear system $A\vec{x} = \vec{0}$ with elementary row operations on an augmented matrix.
 
 \begin{align*}
 \left( \begin{array}{cc|c}1 & 1 & 0 \\ 1 & 2 & 0 \\ 1 & 3 & 0 \end{array} \right) \\
@@ -453,6 +453,45 @@ We get the equations $x_{1} = 0$ and $x_{2} = 0$. Thus
 
 \begin{align*}
 \ker A = \{ \vec{0} \}
+\end{align*}
+
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & -1 & -1 & 1 & 1 \\ -1 & 1 & 0 & -2 & 2 \\ 1 & -1 & -2 & 0 & 3 \\ 2 & -2 & -1 & 3 & 4 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+We can solve the linear system $A\vec{x} = \vec{0}$.
+
+\begin{align*}
+\left( \begin{array}{ccccc|c}1 & -1 & -1 & 1 & 1 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 1 & -1 & -2 & 0 & 3 & 0 \\ 2 & -2 & -1 & 3 & 4 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 1 & -1 & -2 & 0 & 3 & 0 \\ 2 & -2 & -1 & 3 & 4 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & -2 & -2 & 5 & 0 \\ 2 & -2 & -1 & 3 & 4 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & 0 & 0 & -1 & 0 \\ 2 & -2 & -1 & 3 & 4 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & 0 & 0 & -1 & 0 \\ 0 & 0 & -1 & -1 & 6 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & 0 & 3 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c}0 & 0 & -1 & -1 & 3 & 0 \\ -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c} -1 & 1 & 0 & -2 & 2 & 0 \\ 0 & 0 & -1 & -1 & 3 & 0 \\ 0 & 0 & 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c} 1 & -1 & 0 & 2 & -2 & 0 \\ 0 & 0 & 1 & 1 & -3 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array} \right) \\
+\left( \begin{array}{ccccc|c} 1 & -1 & 0 & 2 & 0 & 0 \\ 0 & 0 & 1 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array} \right) \\
+\end{align*}
+
+This gives us the equations
+
+\begin{align*}
+x_{3} = -x_{4} \\
+x_{5} = 0
+\end{align*}
+
+Let r, s be real numbers. Then the solutions are
+
+\begin{align*}
+\ker A = \begin{bmatrix}
+s - 2t \\ s \\ -t \\ t \\ 0
+\end{bmatrix}
 \end{align*}
 
 \end{solution}

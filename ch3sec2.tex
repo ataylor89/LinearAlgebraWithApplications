@@ -127,4 +127,51 @@ V &= \im B \\ &= \im \begin{bmatrix} 1 & 1 \\ 1 & -2 \\ -1 & 1 \end{bmatrix}
 
 \end{solution}
 
+\begin{problem}
+Consider the matrix
+
+\begin{align*}
+A = \begin{bmatrix} 1 & 2 & 1 & 2 \\ 1 & 2 & 2 & 3 \\ 1 & 2 & 3 & 4 \end{bmatrix}
+\end{align*}
+
+Find vectors in $\mathbb{R}^3$ that span the image of A. What is the smallest number of vectors needed to span the image of A?
+\end{problem}
+
+\begin{solution}
+The vectors 
+
+\begin{align*}
+\vec{v_{1}} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} 
+\vec{v_{2}} = \begin{bmatrix} 2 \\ 2 \\ 2 \end{bmatrix}
+\vec{v_{3}} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+\vec{v_{4}} = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix}
+\end{align*}
+
+span the image of A. \\
+
+The vector $v_{2}$ is redundant because $v_{2} = 2v_{1}$. The vector $v_{4}$ is redundant because $v_{1} + v_{3} = v_{4}$. Thus only two vectors are needed to span the image of A, the vectors $v_{1}$ and $v_{3}$. 
+
+\begin{align*}
+\im A = \Span \left( v_{1}, v_{3} \right)
+\end{align*}
+
+We can verify this algebraically. We know that the image of A is spanned by the vectors $\vec{v_{1}}$, $\vec{v_{2}}$, $\vec{v_{3}}$, $\vec{v_{4}}$. \\
+
+Let $\vec{u}$ be a vector in $\mathbb{R}^3$. Then
+
+\begin{align*}
+\vec{u} = c_{1} \vec{v_{1}} + c_{2} \vec{v_{2}} + c_{3} \vec{v_{3}} + c_{4} \vec{v_{4}}
+\end{align*}
+
+for some real coefficients $c_{1}, c_{2}, c_{3}, c_{4}$. Substituting we get 
+
+\begin{align*}
+\vec{u} &= c_{1} \vec{v_{1}} + c_{2} (2 \vec{v_{1}}) + c_{3} \vec{v_{3}} + c_{4} (v_{1} + v_{3}) \\
+&= (c_{1} + c_{4} + 2c_{1}) \vec{v_{1}} + (c_{3} + c_{4}) \vec{v_{3}}
+\end{align*}
+
+Thus $\vec{u}$ is a linear combination of vectors $\vec{v_{1}}$ and $\vec{v_{3}}$. The vectors $\vec{v_{1}}$ and $\vec{v_{3}}$ form a basis for the image of A.
+
+\end{solution}
+
 \end{document}

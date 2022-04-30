@@ -91,4 +91,40 @@ This is equivalent to saying any vector $\vec{u}$ in $\mathbb{R}^2$ can be writt
 
 \end{solution}
 
+\begin{problem}
+Consider the plane V in $\mathbb{R}^3$ given by the equation
+
+\begin{align*} x_{1} + 2x_{2} + 3x_{3} = 0 \end{align*}
+
+\begin{itemize}
+\item Find a matrix A such that $V = \ker A$
+\item Find a matrix B such that $V = \im B$
+\end{itemize}
+\end{problem}
+
+\begin{solution}
+Let $A = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}$. We can write 
+
+\begin{align*}
+V &= \ker A \\ &= \ker \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}
+\end{align*}
+
+We can find two nonparallel vectors $\vec{v}$ and $\vec{w}$ in V. \\
+
+Let $\vec{v} = \begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix}$ and $\vec{w} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}$. \\
+
+We can construct our matrix B from the column vectors $\vec{v}$ and $\vec{w}$.
+
+\begin{align*}
+B = \begin{bmatrix} \vec{v} & \vec{w} \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & -2 \\ -1 & 1 \end{bmatrix} 
+\end{align*}
+
+Now we can say 
+
+\begin{align*}
+V &= \im B \\ &= \im \begin{bmatrix} 1 & 1 \\ 1 & -2 \\ -1 & 1 \end{bmatrix} 
+\end{align*}
+
+\end{solution}
+
 \end{document}

@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 3 Section 2}
+\author{Andrew Taylor}
+\date{April 30 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newcommand{\rref}[1]{\mathrm{rref \, #1}}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Rank}{rank}
+\DeclareMathOperator{\im}{im}
+
+\begin{document}
+\maketitle
+
+\begin{problem}
+Is $W = \Bigg \{ \begin{bmatrix} x \\ y \end{bmatrix}$ in $\mathbb{R}^2$: $x \geq 0$ and $y \geq 0 \Bigg \}$ a subspace of $\mathbb{R}^2$?
+\end{problem}
+
+\begin{solution} 
+W contains the zero vector and is closed under addition. But W is not closed under scalar multiplication. Therefore W is not a subspace of $\mathbb{R}^2$.
+\end{solution}
+
+\end{document}

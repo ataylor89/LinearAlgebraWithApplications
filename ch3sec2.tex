@@ -51,8 +51,8 @@ vectors are not parallel.
 \emph{Case 1: } $v_{1} = 0, v_{2} \neq 0, w_{1} \neq 0, w_{2} = 0$ \\
 \emph{Case 2: } $v_{1} \neq 0, v_{2} = 0, w_{1} = 0, w_{2} \neq 0$ \\
 
-In both of these cases, the two vectors are scalar multiples of the unit vectors, and it easy to write any vector $\vec{u}$ as a linear combination of $\vec{v}$ and $\vec{w}$. \\
-\\
+In both of these cases, the determinant of A is nonzero, and the matrix A is invertible.
+\\ \\
 \emph{Case 3: } At least one of the vectors ($\vec{v}$ and $\vec{w}$) has two nonzero components. \\
 
 Let $\vec{v}$ be the vector with two nonzero components. \\
@@ -76,14 +76,16 @@ has solutions for $x_{1}$ and $x_{2}$. \\
 
 Since W is closed under linear combinations, the vector $\vec{u}$ is in the subspace W. This means that W contains every real number, so $W = \mathbb{R}^2$. \\
 
-We can also express this using a linear transformation. Let $T : \mathbb{R}^2 \to \mathbb{R}^2$ be the linear transformation.
+We can also express this using a linear transformation. Let $T : \mathbb{R}^2 \to \mathbb{R}^2$ be the linear transformation
 
 \begin{align*}
 T(\vec{x}) &= \begin{bmatrix} \vec{v} & \vec{w} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
 &= \begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
 \end{align*}
 
-We have shown that the matrix $\begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix}$ is invertible. This means that T is invertible, and that T is a bijection, and that the image of T is $\mathbb{R}^2$. \\
+We have shown that the matrix $\begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix}$ is invertible. \\
+
+This means that there is a unique solution $\vec{x}$ for every vector $\vec{u}$ in $\mathbb{R}^2$. \\
 
 This is equivalent to saying any vector $\vec{u}$ in $\mathbb{R}^2$ can be written as a linear combination of $\vec{v}$ and $\vec{w}$.
 

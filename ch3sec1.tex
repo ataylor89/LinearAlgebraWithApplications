@@ -582,6 +582,46 @@ The kernel of A is a line that passes through the origin.
 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 2 & 0 & 0 & 3 & 0 \\ 0 & 0 & 1 & 0 & 2 & 0 \\ 0 & 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}
+\end{align*}
+\end{problem}
 
+\begin{solution}
+The matrix is already in reduced row echelon form. This gives us the equations 
+
+\begin{align*}
+x_{4} = -x_{5} \\
+x_{3} = -2x_{5}
+\end{align*}
+
+We can write the solutions as
+
+\begin{align*}
+\ker A = \begin{bmatrix}
+-2s - 3t \\ s \\ -2t \\ -t \\ t \\ u
+\end{bmatrix}
+\end{align*}
+
+where s, t and u are arbitrary real numbers. \\
+
+Let's write the solution as the span of vectors. \\
+
+We can get nonparallel vectors by first setting $s = 0$ and then setting $t = 0$. We can then write the solution as the span of these vectors and the unit vector $e_{6}$. \\
+
+\begin{align*}
+\ker A = \Span \left( 
+\begin{bmatrix}
+-2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}, 
+\begin{bmatrix}
+-3 \\ 0 \\ -2 \\ -1 \\ 1 \\ 0
+\end{bmatrix}, 
+\begin{bmatrix}
+0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 1
+\end{bmatrix} \right)
+\end{align*}
+\end{solution}
 
 \end{document}

@@ -205,5 +205,25 @@ Are the following vectors in $\mathbb{R}^7$ linearly independent?
 The vectors $\vec{v_{1}}, \vec{v_{2}}, \vec{v_{3}}$ are not linearly independent since $2\vec{v_{2}} - \vec{v_{1}} = \vec{v_{3}}$.
 \end{solution}
 
+\begin{problem}
+Suppose the column vectors of an $n \times m$ matrix A are linearly independent. Find the kernel of matrix A.
+\end{problem}
+
+\begin{solution}
+Let 
+
+\begin{align*} 
+A = \begin{bmatrix} \vec{v_{1}} & \vec{v_{2}} & \cdots & \vec{v_{m}} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{m} \end{bmatrix}
+\end{align*}
+
+We can find the kernel of A by solving the equation 
+
+\begin{align*} 
+x_{1} \vec{v_{1}} + x_{2} \vec{v_{2}} + \cdots + x_{m} \vec{v_{m}} = 0
+\end{align*}
+
+Since the vectors $\vec{v_{1}}, \vec{v_{2}}, \ldots, \vec{v_{m}}$ are linearly independent, there is only the trivial relation, with $x_{1} = x_{2} = \cdots = x_{m} = 0$, thus the kernel of A is $\{\vec{0}\}$.
+
+\end{solution}
 
 \end{document}

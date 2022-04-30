@@ -45,7 +45,19 @@ where $x_{1}$ and $x_{2}$ are real numbers. We can write this equation in matrix
 
 This equation has solutions when $A = \begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix}$ is invertible. We know that A is invertible when $\det A$ is nonzero. \\
 
-There exist real numbers $c_{1}$ and $c_{2}$ such that $c_{1} v_{1} = w_{1}$ and $c_{2} v_{2} = w_{2}$. We know that $c_{1} \neq c_{2}$ since the two vectors are not parallel (or else one vector would be a scalar multiple of the other). We can substitute these expressions when we calculate the determinant of A.
+The components $v_{1}, v_{2}, w_{1}, w_{2}$ can either be zero or nonzero. There is a small number of possible cases, since both the vectors are not the zero vector, and since the two 
+vectors are not parallel. 
+\\ \\
+\emph{Case 1: } $v_{1} = 0, v_{2} \neq 0, w_{1} \neq 0, w_{2} = 0$ \\
+\emph{Case 2: } $v_{1} \neq 0, v_{2} = 0, w_{1} = 0, w_{2} \neq 0$ \\
+
+In both of these cases, the two vectors are scalar multiples of the unit vectors, and it easy to write any vector $\vec{u}$ as a linear combination of $\vec{v}$ and $\vec{w}$. \\
+\\
+\emph{Case 3: } Either $\vec{v}$ or $\vec{w}$ has two nonzero components. \\
+
+Let $\vec{v}$ be the vector with two nonzero components. \\
+
+There exist real numbers $c_{1}$ and $c_{2}$ such that $c_{1} v_{1} = w_{1}$ and $c_{2} v_{2} = w_{2}$. We know that $c_{1} \neq c_{2}$ since the two vectors are not scalar multiples of each other. We can substitute these expressions when we calculate the determinant of A.
 
 \begin{align*}
 \det A &= v_{1} w_{2} - v_{2} w_{1} \\
@@ -54,9 +66,7 @@ There exist real numbers $c_{1}$ and $c_{2}$ such that $c_{1} v_{1} = w_{1}$ and
 &= v_{1} v_{2}  (c_{2} - c_{1}) 
 \end{align*} 
 
-The only case where the equations $v_{1} v_{2} = 0$ and $w_{1} w_{2} = 0$ both hold true is when $\vec{v}$ and $\vec{w}$ are scalar multiples of the unit vectors $e_{1}$ and $e_{2}$, respectively. In this case, it's easy to show that $\vec{u}$ can be written as a linear combination of $\vec{v}$ and $\vec{w}$. \\
-
-Suppose $\vec{v}$ and $\vec{w}$ are not scalar multiples of the unit vectors. Then either $\vec{v}$ or $\vec{w}$ has two nonzero components. Let $\vec{v}$ be the vector with two nonzero components. Then the determinant of A is not zero, since $c_{1} \neq c_{2}$. Therefore A is invertible, and the equation 
+Since $v_{1} \neq 0$, $v_{2} \neq 0$ and $c_{2} \neq c_{1}$, the determinant of A is nonzero. Thus the matrix A is invertible, and the equation 
 
 \begin{align*}
 x_{1} \vec{v} + x_{2} \vec{w} = \vec{u}
@@ -64,7 +74,18 @@ x_{1} \vec{v} + x_{2} \vec{w} = \vec{u}
 
 has solutions for $x_{1}$ and $x_{2}$. \\
 
-Since W is closed under linear combinations, the vector $\vec{u}$ has to be in the subspace W. This means that every real number is contained in W, so $W = \mathbb{R}^2$.
+Since W is closed under linear combinations, the vector $\vec{u}$ is in the subspace W. This means that W contains every real number, so $W = \mathbb{R}^2$. \\
+
+We can also express this using a linear transformation. Let $T : \mathbb{R}^2 \to \mathbb{R}^2$ be the linear transformation.
+
+\begin{align*}
+T(\vec{x}) &= \begin{bmatrix} \vec{v} & \vec{w} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+&= \begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
+\end{align*}
+
+We have shown that the matrix $\begin{bmatrix} v_{1} & w_{1} \\ v_{2} & w_{2} \end{bmatrix}$ is invertible. This means that T is invertible, and that T is a bijection, and that the image of T is $\mathbb{R}^2$. \\
+
+This is equivalent to saying any vector $\vec{u}$ in $\mathbb{R}^2$ can be written as a linear combination of $\vec{v}$ and $\vec{w}$.
 
 \end{solution}
 

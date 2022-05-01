@@ -293,4 +293,38 @@ W = \Bigg \{ \begin{bmatrix} x + 2y + 3z \\ 4x + 5y + 6z \\ 7x + 8y + 9z \end{bm
 The first two column vectors are linearly independent, and the third is redundant. Thus W is the span of the first two column vectors, a plane passing through the origin. A plane that passes through the origin contains the zero vector, is closed under addition, and is closed under scalar multiplication. Thus W is a subspace of $\mathbb{R}^3$.
 \end{solution}
 
+\begin{problem}
+Consider the vectors $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$ in $\mathbb{R}^n$. Is $\Span \left( \vec{v_{1}}, \dots, \vec{v_{m}} \right)$ necessarily a subspace of $\mathbb{R}^n$? Justify your answer.
+\end{problem}
+
+\begin{solution}
+The span of $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$ is necessarily a subspace of $\mathbb{R}^n$. The span of $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$ is the set of all linear combinations of these vectors, which means it has to be closed under addition and multiplication. Furthermore, the zero vector is included in the span of these vectors, since we can multiply any vector by the scalar zero to get the zero vector. Thus the span of $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$ is a subspace of $\mathbb{R}^n$, as it meets every requirement of a subspace.
+\end{solution}
+
+\begin{problem}
+Give a geometrical description of all subspaces of $\mathbb{R}^3$. Justify your answer.
+\end{problem}
+
+\begin{solution}
+The subspaces of $\mathbb{R}^3$ can be $\mathbb{R}^3$ itself, a plane passing through the origin, a line passing through the origin, or the set $\{ \vec{0} \}$.
+\end{solution}
+
+\begin{problem}
+Consider two subspaces V and W of $\mathbb{R}^n$. Is the intersection $V \cap W$ necessarily a subspace of $\mathbb{R}^n$?
+\end{problem}
+
+\begin{solution}
+Let $\vec{v}, \vec{w}$ be vectors in $V \cap W$. By the definition of intersection, the vectors $\vec{v}, \vec{w}$ are in V and W. Since V and W are closed under addition, the vector $\vec{v} + \vec{w}$ is in both V and W. Thus $\vec{v} + \vec{w}$ is in $V \cap W$. This means that $V \cap W$ is closed under addition. \\
+
+Let $k \in \mathbb{R}$ and let $\vec{v} \in V \cap W$. We know from the definition of intersection that $\vec{v} \in V$ and $\vec{v} \in W$. Since V and W are closed under scalar multiplication, the vector $k \vec{v}$ is in both V and W. Thus the vector $k \vec{v}$ is in $V \cap W$. This means that $V \cap W$ is closed under scalar multiplication. \\
+
+Since both V and W are subspaces, both V and W must contain the zero vector. Thus the zero vector is also in the intersection $V \cap W$. \\ 
+
+The intersection $V \cap W$ is closed under addition, is closed under scalar multiplication, and contains the zero vector. Thus $V \cap W$ is a subspace of $\mathbb{R}^n$. 
+\end{solution}
+
+\begin{problem}
+Consider two subspaces V and W of $\mathbb{R}^n$. Is the union $V \cup W$ necessarily a subspace of $\mathbb{R}^n$?
+\end{problem}
+
 \end{document}

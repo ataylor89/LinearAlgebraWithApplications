@@ -226,4 +226,32 @@ Since the vectors $\vec{v_{1}}, \vec{v_{2}}, \ldots, \vec{v_{m}}$ are linearly i
 
 \end{solution}
 
+\begin{problem}
+If $v_{1}, \ldots, v_{m}$ is a basis of a subspace V of $\mathbb{R}^n$, and if $\vec{v}$ is a vector in V, how many solutions $c_{1},\ldots,c_{m}$ does the equation 
+
+\begin{align*}
+\vec{v} = c_{1} \vec{v_{1}} + \cdots + c_{m} \vec{v_{m}}
+\end{align*}
+
+have?
+\end{problem}
+
+\begin{solution}
+Let $c_{1},\ldots,c_{m}$ and $d_{1},\ldots,d_{m}$ be solutions to the equation. Then
+
+\begin{align*}
+\vec{v} = c_{1} \vec{v_{1}} + \cdots + c_{m} \vec{v_{m}} \\
+\vec{v} = d_{1} \vec{v_{1}} + \cdots + d_{m} \vec{v_{m}} 
+\end{align*}
+
+Subtracting we get
+
+\begin{align*}
+0 = (c_{1} - d_{1}) \vec{v_{1}} + \cdots + (c_{m} - d_{m}) \vec{v_{m}}
+\end{align*}
+
+Since the vectors $v_{1}, \ldots, v_{m}$ are linearly independent, we can conclude that $c_{1} = d_{1}$. Thus there is only one solution to the equation. 
+
+\end{solution}
+
 \end{document}

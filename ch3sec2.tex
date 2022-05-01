@@ -369,4 +369,68 @@ c_{1} \vec{v_{1}} + c_{2} \vec{v_{2}} + \cdots + c_{m} \vec{v_{m}} = \vec{0}
 is a nontrivial relation, where $c_{1} = c_{2} = \cdots = c_{m-1} = 0$ and $c_{m} = 1$
 \end{solution}
 
+In the following exercises, identify the redundant vectors and determine whether the given vectors are linearly independent.
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 7 \\ 11 \end{bmatrix}, 
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The two vectors are not linearly independent, as the zero vector is redundant. We can write the zero vector as a linear combination of $\begin{bmatrix} 7 \\ 11 \end{bmatrix}$, thus the zero vector is redundant.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 7 \\ 11 \end{bmatrix}, 
+\begin{bmatrix} 11 \\ 7 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The two vectors are linearly independent, as we cannot write the second vector as a linear combination of the first.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 2 \\ 1 \end{bmatrix}, 
+\begin{bmatrix} 6 \\ 3 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The two vectors are not linearly independent. The second vector is redundant: the second vector is a scalar multiple of the first.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 2 \\ 1 \end{bmatrix}, 
+\begin{bmatrix} 6 \\ 3 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The two vectors are not linearly independent. The second vector is redundant.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, 
+\begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix}
+\begin{bmatrix} 6 \\ 5 \\ 4 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The three vectors are not linearly independent, as a nontrivial relation exists among them.
+
+\begin{align*} 
+\begin{bmatrix} 6 \\ 5 \\ 4 \end{bmatrix} - \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} - 3 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \vec{0}
+\end{align*}
+
+The third vector is redundant.
+\end{solution}
+
 \end{document}

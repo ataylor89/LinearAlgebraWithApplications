@@ -461,4 +461,26 @@ The three vectors are linearly dependent. The third vector is redundant, as show
 The three vectors are linearly independent. The zero components of each vector show that no vector is redundant.
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, 
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix},
+\begin{bmatrix} 1 \\ 3 \\ 6 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let $A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6 \end{bmatrix}$. Let's find the kernel of A.
+
+\begin{align*}
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 1 & 2 & 3 & 0 \\ 1 & 3 & 6 & 0\end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 0 & 1 & 2 & 0 \\ 0 & 2 & 5 & 0\end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 1 & 0\end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0\end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0\end{array} \right) 
+\end{align*}
+
+The kernel of A is $\{ \vec{0} \}$. Thus the three vectors are linearly independent, and none of the vectors are redundant.
+\end{solution}
+
 \end{document}

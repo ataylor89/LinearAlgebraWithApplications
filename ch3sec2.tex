@@ -333,4 +333,12 @@ The union of two subspaces is not necessarily a subspace. \\
 Let $V = \Span \left[1, 0 \right]$ and $W = \Span \left[0, 1 \right]$. The vectors $\left[1, 0 \right]$ and $\left[0, 1 \right]$ are in the union of V and W, but their sum $\left[1, 1 \right]$ is not in the union of V and W. The set $V \cup W$ is not closed under addition, so $V \cup W$ is not a subspace.
 \end{solution}
 
+\begin{problem}
+Consider a nonempty subset W of $\mathbb{R}^n$ that is closed under addition and under scalar multiplication. Is W necessarily a subspace of $\mathbb{R}^n$? Explain
+\end{problem}
+
+\begin{solution}
+W is necessarily a subspace of $\mathbb{R}^n$. Let $\vec{v}$ be a vector in W. Since W is closed under scalar multiplication, the additive inverse $-\vec{v}$ is in W. Since W is closed under addition, $\vec{v} + -\vec{v} = \vec{0}$ is in W. Since W contains the zero vector and is closed under addition and scalar multiplication, W is a subspace of $\mathbb{R}^n$.
+\end{solution}
+
 \end{document}

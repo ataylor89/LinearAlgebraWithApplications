@@ -341,4 +341,32 @@ Consider a nonempty subset W of $\mathbb{R}^n$ that is closed under addition and
 W is necessarily a subspace of $\mathbb{R}^n$. Let $\vec{v}$ be a vector in W. Since W is closed under scalar multiplication, the additive inverse $-\vec{v}$ is in W. Since W is closed under addition, $\vec{v} + -\vec{v} = \vec{0}$ is in W. Since W contains the zero vector and is closed under addition and scalar multiplication, W is a subspace of $\mathbb{R}^n$.
 \end{solution}
 
+\begin{problem}
+Find a nontrivial relation among the following vectors:
+
+\begin{align*}
+\begin{bmatrix}1 \\ 2 \end{bmatrix}, \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \begin{bmatrix}3 \\ 4 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+2* \begin{bmatrix} 2 \\ 3 \end{bmatrix} - \begin{bmatrix}1 \\ 2 \end{bmatrix} - \begin{bmatrix}3 \\ 4 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\end{align*}
+\end{solution}
+
+\begin{problem}
+Consider the vectors $\vec{v_{1}}, \vec{v_{2}}, \ldots, \vec{v_{m}}$ in $\mathbb{R}^n$, with $\vec{v_{m}} = \vec{0}$. Are these vectors linearly independent?
+\end{problem}
+
+\begin{solution}
+The vectors are not linearly independent, since we can form a nontrivial relation by setting $c_{1} = c_{2} = \cdots = c_{m-1} = 0$ and $c_{m} = 1$.
+
+\begin{align*}
+c_{1} \vec{v_{1}} + c_{2} \vec{v_{2}} + \cdots + c_{m} \vec{v_{m}} = \vec{0}
+\end{align*}
+
+is a nontrivial relation, where $c_{1} = c_{2} = \cdots = c_{m-1} = 0$ and $c_{m} = 1$
+\end{solution}
+
 \end{document}

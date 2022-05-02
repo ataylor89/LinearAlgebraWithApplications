@@ -483,4 +483,70 @@ Let $A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6 \end{bmatrix}$. Let
 The kernel of A is $\{ \vec{0} \}$. Thus the three vectors are linearly independent, and none of the vectors are redundant.
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, 
+\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, 
+\begin{bmatrix} 4 \\ 5 \\ 0 \end{bmatrix},
+\begin{bmatrix} 6 \\ 7 \\ 0 \end{bmatrix},
+\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The first vector (the zero vector) is redundant. The third vector (3, 0, 0) is redundant. The fifth and sixth vectors (4, 5, 0) and (6, 7, 0) are redundant. The seven vectors are linearly dependent.\\
+\\
+The vectors (1, 0, 0) (0, 1, 0) and (0, 0, 1) are linearly independent.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, 
+\begin{bmatrix} 2 \\ 0 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}, 
+\begin{bmatrix} 3 \\ 4 \\ 5 \\ 0 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The second and fifth vectors are redundant. The five vectors are linearly dependent.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, 
+\begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}, 
+\begin{bmatrix} 1 \\ 4 \\ 7 \\ 10 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+Let $A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 4 \\ 1 & 3 & 7 \\ 1 & 4 & 10 \end{bmatrix}$ \\
+\\ \\
+Let's find the kernel of A.
+
+\begin{align*}
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 1 & 2 & 4 & 0 \\ 1 & 3 & 7 & 0 \\ 1 & 4 & 10 & 0 \end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 2 & 6 & 0 \\ 0 & 3 & 9 & 0 \end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array} \right) \\
+\left( \begin{array}{ccc|c} 1 & 0 & -2 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array} \right) \\
+\end{align*}
+
+This gives us the equations $x_{1} = 2x_{3}$ and $x_{2} = -3x_{3}$. 
+
+\begin{align*}
+\ker A &= \begin{bmatrix} 2t \\ -3t \\ t \end{bmatrix} \\
+&= t \begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix} \\
+&= \Span \begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix}
+\end{align*}
+
+The kernel of A is the line spanned by the vector $\begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix}$. \\
+
+This means that the three column vectors are linearly dependent, since there are many nontrivial relations among the three vectors. The third column vector is redundant.
+
+\end{solution}
+
 \end{document}

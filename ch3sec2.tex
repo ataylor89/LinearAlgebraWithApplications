@@ -623,4 +623,24 @@ A = \begin{bmatrix}0 & 1 \\ 0 & 2 \end{bmatrix}
 The first vector is redundant, because it's the zero vector. Let $t \in \mathbb{R}$ such that $t \neq 0$. Every vector of the form $(t, 0)$ is a nontrivial vector in the kernel of A. Thus the kernel of A is a line. 
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 0 & 2 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The third column vector is redundant, because it can be written as a linear combination of the first two vectors. We can write the nontrivial relation
+
+\begin{align*}
+2 \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} - 3 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} - 1 \begin{bmatrix} 2 \\ 3 \\ 0 \end{bmatrix} + 0 \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+\end{align*}
+
+which gives us a nonzero vector in the kernel of A 
+
+\begin{align*}
+\vec{v} = \begin{bmatrix} 2 \\ -3 \\ -1 \\ 0 \end{bmatrix}
+\end{align*}
+\end{solution}
+
 \end{document}

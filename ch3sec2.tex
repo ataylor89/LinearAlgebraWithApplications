@@ -549,4 +549,37 @@ This means that the three column vectors are linearly dependent, since there are
 
 \end{solution}
 
+In the following problems find a redundant column vector of the given matrix A, and write it as a linear combination of the preceding columns. Use this to find a nonzero vector in the kernel of A.
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}1 & 1 \\ 1 & 1 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{problem}
+Let
+
+\begin{align*}
+\begin{bmatrix}\vec{v} & \vec{w} \end{bmatrix} = \begin{bmatrix}1 & 1 \\ 1 & 1 \end{bmatrix}
+\end{align*}
+
+We're looking for a linear combination of $\vec{v}$ and $\vec{w}$ that is nontrivial. In other words, we want a solution to the equation
+
+\begin{align*}
+x_{1} \vec{v} + x_{2} \vec{w} = 0
+\end{align*}
+
+that is not $(0, 0)$. \\
+
+First we can identify that the second column vector is redundant. This means there is a nontrivial relation, because the vectors are linearly dependent. \\
+
+The vector (1, -1) is a nonzero vector in the kernel of A because 
+
+\begin{align*}
+1\begin{bmatrix} 1 \\ 1 \end{bmatrix} - 1\begin{bmatrix} 1 \\ 1\end{bmatrix} = 0
+\end{align*}
+
+\end{problem}
+
 \end{document}

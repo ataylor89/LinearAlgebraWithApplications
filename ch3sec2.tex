@@ -653,4 +653,39 @@ A = \begin{bmatrix}1 & 0 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 1 \end{bmatrix}
 The third column vector is redundant. The vector $\vec{v} = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}$ is a nontrivial vector in the kernel of A.
 \end{solution}
 
+\begin{problem}
+\begin{align*}
+A = \begin{bmatrix}1 & 3 & 6 \\ 1 & 2 & 5 \\ 1 & 1 & 4 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+We can find out if there are any redundant vectors by computing the kernel of the matrix. We start by calculating $\rref{A}$.
+
+\begin{align*}
+& \left( \begin{array}{ccc|c}1 & 3 & 6 & 0 \\ 1 & 2 & 5 & 0 \\ 1 & 1 & 4 & 0\end{array} \right) \\
+& \left( \begin{array}{ccc|c}0 & 2 & 2 & 0 \\ 0 & 1 & 1 & 0 \\ 1 & 1 & 4 & 0\end{array} \right) \\
+& \left( \begin{array}{ccc|c}0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 1 & 1 & 4 & 0\end{array} \right) \\
+& \left( \begin{array}{ccc|c}0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 1 & 0 & 3 & 0\end{array} \right)
+\end{align*}
+
+This gives us the equations
+
+\begin{align*}
+x_{1} = -3x_{3} \\
+x_{2} = -2x_{3}
+\end{align*}
+
+Thus the kernel of A is a line given by
+
+\begin{align*}
+\ker A &= \begin{bmatrix} -3t \\ -2t \\ t \end{bmatrix} \\
+&= t \begin{bmatrix} -3 \\ -2 \\ 1 \end{bmatrix} \\
+&= \Span \begin{bmatrix} -3 \\ -2 \\ 1 \end{bmatrix} \\
+\end{align*}
+
+A nonzero kernel means the three vectors are linearly dependent. In other words, one of the vectors has to be redundant. Since the second vector is not a scalar multiple of the first, the first two vectors are linearly independent. That means the third vector has to be redundant.
+
+\end{solution}
+
 \end{document}

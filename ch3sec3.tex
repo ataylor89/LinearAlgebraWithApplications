@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 3 Section 3}
+\author{Andrew Taylor}
+\date{May 9 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newcommand{\rref}[1]{\mathrm{rref \, #1}}
+\newcommand{\im}[1]{\mathrm{im \, #1}}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Rank}{rank}
+
+\begin{document}
+\maketitle
+
+\begin{problem}
+Find bases of the image and kernel of the matrix
+
+\begin{align*}
+A = \begin{bmatrix}
+1 & 2 & 0 & 1 & 2 \\
+1 & 2 & 0 & 2 & 3 \\
+1 & 2 & 0 & 3 & 4 \\
+1 & 2 & 0 & 4 & 5
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The second column vector is redundant because it is a scalar multiple of the first. The third column vector is redundant because it's the zero vector. The fifth column vector is redundant because it's the sum of the first column vector and the fourth column vector. This leaves us with the first and fourth column vectors, which form a basis for the image of A.
+
+\begin{align*}
+\im{A} = \Span \left( \begin{bmatrix}1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 2 \\ 3 \\ 4 \end{bmatrix} \right)
+\end{align*} 
+
+We know from the rank-nullity theorem that 
+
+\begin{align*}
+\dim \ker A + \dim \im A = m
+\end{align*}
+
+The matrix A is a $4 \times 5$ matrix, which means that $m = 5$. Furthermore, we know that $\dim \im A = 2$. This gives us
+
+\begin{align*}
+\dim \ker A = 3 
+\end{align*}
+
+Thus the basis of the kernel must have three linearly independent vectors. Let's find three linearly independent vectors in the kernel of A. \\
+
+We'll proceed by finding relations among the redundant column vectors in A. Let's refer to the column vectors in A as $\vec{v_{1}}, \vec{v_{2}}, \ldots, \vec{v_{5}}$ \\
+
+\begin{align*}
+& v_{2} = 2v_{1} \implies -2v_{1} + v_{2}  = 0 \\
+& v_{3} = 0 \\
+& v_{5} = v_{1} + v_{4} \implies v_{1} + v_{4} - v_{5} = 0
+\end{align*}
+
+This gives us the vectors
+
+\begin{align*}
+\vec{w_{1}} = \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} \quad \vec{w_{2}} = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix} \quad \vec{w_{3}} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \\ -1 \end{bmatrix}
+\end{align*}
+
+These three vectors are linearly independent, and they form a basis for the kernel of A.
+
+\begin{align*}
+\ker A &= \Span \left( \vec{w_{1}}, \vec{w_{2}}, \vec{w_{3}} \right) \\ \\
+&= \Span \left( \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \\ -1 \end{bmatrix} \right) 
+\end{align*}
+
+\end{solution}
+
+\end{document}

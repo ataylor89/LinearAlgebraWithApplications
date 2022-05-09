@@ -73,4 +73,28 @@ These three vectors are linearly independent, and they form a basis for the kern
 
 \end{solution}
 
+\begin{problem}
+For which values of the constant k do the following vectors form a basis of $\mathbb{R}^3$?
+
+\begin{align*}
+\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ k \\ k^2 \end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+We need to determine when the matrix 
+
+\begin{align*}
+A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & -1 & k \\ 1 & 1 & k^2 \end{bmatrix} 
+\end{align*}
+
+is invertible. This matrix reduces to 
+
+\begin{align*}
+\begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & (1-k)/2 \\ 0 & 0 & k^2-1 \end{bmatrix} 
+\end{align*}
+
+When $k = 1$ or $k = -1$, the rank of the matrix is 2. For all other values of k, we are able to reduce the matrix to $I_{3}$, simply by dividing the third row by the scalar $k^2 - 1$ and getting a leading 1 in the third column. Thus the matrix A is invertible when $k^2 - 1 \neq 0$, that is, when $k \neq 1$ and $k \neq -1$.
+\end{solution}
+
 \end{document}

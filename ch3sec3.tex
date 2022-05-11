@@ -172,6 +172,12 @@ Thus the vector $\begin{bmatrix}1 \\ 0 \end{bmatrix}$ is a basis for the kernel 
 \end{align*}
 \end{problem}
 
+\begin{solution}
+The vectors $\begin{bmatrix}1 \\ 3 \end{bmatrix}$ and $\begin{bmatrix} 2 \\ 4 \end{bmatrix}$ form a basis for the image of A, because the two vectors are linearly independent. \\
+
+The rank-nullity theorem tells us that $\dim \im A + \dim \ker A = m$. We know that $m = 2$ since $A$ is a $2 \times 2$ matrix. Since $\dim \im A = 2$, we know that $\dim \ker A = 0$. Thus $\ker A = \{ \vec{0} \}$ and the vector $\vec{0}$ forms a basis for the kernel of A.
+\end{solution}
+
 \begin{problem}
 \begin{align*}
 \begin{bmatrix}
@@ -179,5 +185,69 @@ Thus the vector $\begin{bmatrix}1 \\ 0 \end{bmatrix}$ is a basis for the kernel 
 \end{bmatrix}
 \end{align*}
 \end{problem}
+
+\begin{solution}
+The second column vector is redundant. Thus the first column vector $\begin{bmatrix}1 \\ 2 \end{bmatrix}$ forms a basis for the image of A. \\
+
+The redundant column vector gives us the relation 
+
+\begin{align*}
+& 4\vec{v_{1}} = \vec{v_{2}} \\
+& 4\vec{v_{1}} - \vec{v_{2}} = 0 \\
+& \begin{bmatrix} \vec{v_{1}} & \vec{v_{2}} \end{bmatrix} \begin{bmatrix} 4 \\ -1 \end{bmatrix} = 0
+\end{align*}
+
+Thus the vector $\begin{bmatrix} 4 \\ -1 \end{bmatrix}$ is in the kernel of A, and since the kernel of A has dimension 1, the vector $\begin{bmatrix} 4 \\ -1 \end{bmatrix}$ forms a basis for the kernel of A.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & -2 & 3 \\ 2 & 4 & 6
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The column vector $\begin{bmatrix} 3 \\ 6 \end{bmatrix}$ is redundant. The first two column vectors $\begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $\begin{bmatrix} -2 \\ 4 \end{bmatrix}$ form a basis for the image of A. \\
+
+We get the relation $3\vec{v_{1}} = \vec{v_{3}}$. Thus
+
+\begin{align*}
+& 3\vec{v_{1}} - \vec{v_{3}} = 0 \\
+& \begin{bmatrix}\vec{v_{1}} & \vec{v_{2}} \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} = 0
+\end{align*}
+
+The kernel has dimension 1. Therefore the vector $\begin{bmatrix} 3 \\ -1 \end{bmatrix}$ forms a basis for the kernel of A.
+\end{solution}
+
+\begin{problem}
+\begin{align*}
+\begin{bmatrix}
+1 & 1 & 3 \\ 2 & 1 & 4
+\end{bmatrix}
+\end{align*}
+\end{problem}
+
+\begin{solution}
+The third column vector is redundant, since
+
+\begin{align*}
+\begin{bmatrix} 1 \\ 2 \end{bmatrix} + 2 \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+\end{align*}
+
+The first two column vectors are linearly independent. Thus $\begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ form a basis for the image of A. \\ 
+
+The redundant column vector gives us the relation
+
+\begin{align*}
+& \vec{v_{1}} + 2 \vec{v_{2}} = \vec{v_{3}} \\
+& \vec{v_{1}} + 2 \vec{v_{2}} - \vec{v_{3}} = 0 \\
+\begin{bmatrix} \vec{v_{1}} & \vec{v_{2}} & \vec{v_{3}} \end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}
+\end{align*}
+
+Thus the vector $\begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$ is in the kernel of A. The kernel of A has dimension 1, so the vector $\begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$ forms a basis for the kernel of A.
+
+\end{solution}
 
 \end{document}

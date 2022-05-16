@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[export]{adjustbox}
+
+\title{Chapter 3 Section 4}
+\author{Andrew Taylor}
+\date{May 16 2022}
+\newtheorem{theorem}{Theorem}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newcommand{\rref}[1]{\mathrm{rref \, #1}}
+\newcommand{\im}[1]{\mathrm{im \, #1}}
+\newcommand{\Span}[1]{\mathrm{span(#1)}}
+\newcommand{\Rank}[1]{\mathrm{rank(#1)}}
+\begin{document}
+\maketitle
+
+\begin{problem}
+Let $\vec{v_{1}} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$ and $\vec{v_{2}} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$. Let $V = \Span{v_{1}, v_{2}}$. Is the vector $\vec{w} = \begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}$ on the plane V?
+\end{problem}
+
+\begin{solution}
+If the vector $\vec{w}$ is on the plane V, then there exist some $x_{1}, x_{2} \in \mathbb{R}$ such that $\vec{w} = x_{1} \vec{v_{1}} + x_{2} \vec{v_{2}}$. This gives us the equations
+
+\begin{align*}
+x_{1} + x_{2} &= 5 \\
+x_{1} + 2x_{2} &= 7 \\ 
+x_{1} + 3x_{2} &= 9
+\end{align*}
+
+We can solve these equations using a matrix.
+
+\begin{align*}
+\left[ \begin{array}{cc|c}
+1 & 1 & 5 \\
+1 & 2 & 7 \\
+1 & 3 & 9
+\end{array} \right] \\
+\left[ \begin{array}{cc|c}
+1 & 1 & 5 \\
+0 & 1 & 2 \\
+0 & 2 & 4
+\end{array} \right] \\
+\left[ \begin{array}{cc|c}
+1 & 1 & 5 \\
+0 & 1 & 2 \\
+0 & 0 & 0
+\end{array} \right] \\
+\left[ \begin{array}{cc|c}
+1 & 0 & 3 \\
+0 & 1 & 2 \\
+0 & 0 & 0
+\end{array} \right]
+\end{align*}
+
+This gives us $x_{1} = 3$ and $x_{2} = 2$. \\
+
+Thus $\vec{w}$ is on the plane V because $\vec{w} = 3 \vec{v_{1}} + 2 \vec{v_{2}}$.
+
+\end{solution}
+
+\end{document}

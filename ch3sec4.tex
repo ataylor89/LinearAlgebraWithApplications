@@ -12,7 +12,7 @@
 \newcommand{\im}[1]{\mathrm{im \, #1}}
 \newcommand{\Span}[1]{\mathrm{span(#1)}}
 \newcommand{\Rank}[1]{\mathrm{rank(#1)}}
-\newcommand{\Coord}[2]{\left[ \vec{#1} \right]_{\mathfrak{#2}}}
+\newcommand{\Coord}[2]{\Bigg[ \, \vec{#1} \, \Bigg]_{\mathfrak{#2}}}
 \begin{document}
 \maketitle
 
@@ -114,5 +114,79 @@ We can also use an equation to solve for $\vec{y}$.
 &= \begin{bmatrix} 7 \\ -1 \end{bmatrix}
 \end{align*}
 \end{solution}
+
+\begin{problem}
+Let $\vec{v_{1}}$ and $\vec{v_{2}}$ be perpendicular unit vectors in $\mathbb{R}^3$. Let $\vec{v_{3}}$ be the cross product of $\vec{v_{1}}$ and $\vec{v_{2}}$, that is, $\vec{v_{3}} = \vec{v_{1}} \times \vec{v_{2}}$. We know from the properties of the cross product that $\vec{v_{3}}$ is perpendicular to $\vec{v_{1}}$ and $\vec{v_{2}}$. Thus the three vectors are linearly independent. The three vectors form a basis for $\mathbb{R}^3$.
+
+\begin{enumerate}
+\item What is $\vec{v_{1}} \times \vec{v_{3}}$?
+\item Find the $\mathfrak{B}$-matrix of the linear transformation $T(x) = \vec{v_{1}} \times \vec{x}$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+$\vec{v_{1}} \times \vec{v_{3}} = -\vec{v_{2}}$. \\
+
+The $\mathfrak{B}$-matrix is the matrix B such that \\
+
+\begin{align*}
+\Coord{T(x)}{B} = B \Coord{x}{B}
+\end{align*}
+
+%We know that $\Coord{x}{B} = \begin{bmatrix} \vec{x} \cdot \vec{v_{1}} \\ \vec{x} \cdot \vec{v_{2}} \\ \vec{x} \cdot \vec{v_{3}}\end{bmatrix}$.
+
+We can find the coordinates of $\vec{x}$ with respect to $\mathfrak{B}$ by means of an equation.
+
+\begin{align*}
+\vec{x} &= c_{1} \vec{v_{1}} + c_{2} \vec{v_{2}} + c_{3} \vec{v_{3}} \\
+&= \begin{bmatrix} \vec{v_{1}} & \vec{v_{2}} & \vec{v_{3}} \end{bmatrix} \begin{bmatrix} c_{1} \\ c_{2} \\ c_{3} \end{bmatrix}
+\end{align*}
+\end{solution}
+
+Likewise, we have
+
+\begin{align*}
+T(x) &= \vec{v_{1}} \times \vec{x} \\
+&= \vec{v_{1}} \times (c_{1} \vec{v_{1}} + c_{2} \vec{v_{2}} + c_{3} \vec{v_{3}}) \\
+&= c_{1} (\vec{v_{1}} \times \vec{v_{1}}) + c_{2} (\vec{v_{1}} \times \vec{v_{2}}) + c_{3} (\vec{v_{1}} \times \vec{v_{3}}) \\
+&= c_{2} v_{3} - c_{3} \vec{v_{2}} \\
+&= \begin{bmatrix} \vec{v_{1}} & \vec{v_{2}} & \vec{v_{3}} \end{bmatrix} \begin{bmatrix} 0 \\ -c_{3} \\ c_{2} \end{bmatrix}
+\end{align*}
+
+Thus 
+
+\begin{align*}
+\Coord{x}{B} = \begin{bmatrix} c_{1} \\ c_{2} \\ c_{3} \end{bmatrix}
+\end{align*} 
+
+and 
+
+\begin{align*}
+\Coord{T(x)}{B} = \begin{bmatrix} 0 \\ -c_{3} \\ c_{2} \end{bmatrix}
+\end{align*} 
+
+Now let's find the matrix B such that 
+
+\begin{align*}
+\begin{bmatrix} 0 \\ -c_{3} \\ c_{2} \end{bmatrix} = B \begin{bmatrix} c_{1} \\ c_{2} \\ c_{3} \end{bmatrix}
+\end{align*}
+
+By inspection, we see that
+
+\begin{align*}
+B = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{bmatrix}
+\end{align*}
+
+Thus 
+
+\begin{align*}
+\Coord{T(x)}{B} = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{bmatrix} \Coord{x}{B}
+\end{align*}
+
+and the $\mathfrak{B}$-matrix of T is
+
+\begin{align*}
+B = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{bmatrix}
+\end{align*}
 
 \end{document}

@@ -5,6 +5,7 @@
 \title{Chapter 3 Section 4}
 \author{Andrew Taylor}
 \date{May 16 2022}
+\newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
@@ -247,5 +248,14 @@ The above equations show that $AS = SB$ and $A = SBS^{-1}$. \\
 The equation $A = SBS^{-1}$ gives us another way of finding A (since we know S, we know B, and we can calculate $S^{-1}$).
 
 \end{solution}
+
+\begin{definition}
+Two $n \times n$ matrices A and B are similar if there exists an invertible matrix S such that
+
+\begin{align*}
+AS = SB\textrm{, or }B = S^{-1}AS
+\end{align*}
+
+\end{definition}
 
 \end{document}

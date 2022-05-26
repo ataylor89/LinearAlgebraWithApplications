@@ -13,6 +13,7 @@
 \newcommand{\Span}[1]{\mathrm{span(#1)}}
 \newcommand{\Rank}[1]{\mathrm{rank(#1)}}
 \newcommand{\Coord}[2]{\Bigg[ \, \vec{#1} \, \Bigg]_{\mathfrak{#2}}}
+\newcommand{\Proj}[2]{\mathrm{proj}_{#1}(\vec{#2})}
 \begin{document}
 \maketitle
 
@@ -188,5 +189,63 @@ and the $\mathfrak{B}$-matrix of T is
 \begin{align*}
 B = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{bmatrix}
 \end{align*}
+
+\begin{problem}
+Let T be the linear transformation from $\mathbb{R}^2$ to $\mathbb{R}^2$ that projects any vector onto the line L spanned by the vector $\begin{bmatrix} 3 \\ 1 \end{bmatrix}$. Earlier we found that the $\mathfrak{B}$-matrix of T with respect to the basis $\mathfrak{B} = \left( \begin{bmatrix} 3 \\ 1 \end{bmatrix}, \begin{bmatrix} -1 \\ 3 \end{bmatrix} \right)$ is
+
+\begin{align*}
+B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
+\end{align*}
+
+What is the relationship between B and the standard matrix A of T (such that T(x) = Ax?
+\end{problem}
+
+\begin{solution}
+\begin{align*}
+\Proj{L}{x} &= \dfrac{1}{w_{1}^2 + w_{2}^2} \begin{bmatrix} w_{1}^2 & w_{1}w_{2} \\ w_{1}w_{2} & w_{2}^2 \end{bmatrix} \\
+&= \dfrac{1}{3^2 + 1^2} \begin{bmatrix} 3^2 & 3*1 \\ 3*1 & 1^2 \end{bmatrix} \\
+&= \dfrac{1}{10} \begin{bmatrix} 9 & 3 \\ 3 & 1 \end{bmatrix} \\
+&= \begin{bmatrix} \dfrac{9}{10} & \dfrac{3}{10} \\ \\ \dfrac{3}{10} & \dfrac{1}{10} \end{bmatrix} \\
+&= \begin{bmatrix} 0.9 & 0.3 \\ 0.3 & 0.1 \end{bmatrix}
+\end{align*}
+
+Thus the standard matrix of T is 
+
+\begin{align*}
+A = \begin{bmatrix} 0.9 & 0.3 \\ 0.3 & 0.1 \end{bmatrix}
+\end{align*}
+
+and 
+
+\begin{align*}
+T(\vec{x}) &= A \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} \\
+&= \begin{bmatrix} 0.9 & 0.3 \\ 0.3 & 0.1 \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}
+\end{align*}
+
+Now we're going to find the relationship between A and B. \\
+
+Let $S = \begin{bmatrix} 3 & -1 \\ 1 & 3 \end{bmatrix}$ \\
+
+Let's write $T(\vec{x})$ in terms of A and S.
+
+\begin{align*}
+\vec{x} &= S \Coord{x}{B} \\
+T(\vec{x}) &= A \vec{x} \\
+T(\vec{x}) &= A S \Coord{x}{B} 
+\end{align*}
+
+Now let's write $T(\vec{x})$ in terms of B and S.
+
+\begin{align*}
+\Coord{T(x)}{B} &= B\Coord{x}{B} \\
+T(\vec{x}) &= S \Coord{T(x)}{B}  \\
+T(\vec{x}) &= S B\Coord{x}{B}
+\end{align*}
+
+The above equations show that $AS = SB$ and $A = SBS^{-1}$. \\
+
+The equation $A = SBS^{-1}$ gives us another way of finding A (since we know S, we know B, and we can calculate $S^{-1}$).
+
+\end{solution}
 
 \end{document}

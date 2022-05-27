@@ -293,4 +293,28 @@ We have found invertible matrices S such that $AS = SB$, so we know that matrix 
 
 \end{solution}
 
+\begin{theorem}
+If matrix A is similar to matrix B, then its power $A^{t}$ is similar to $B^{t}$ for all positive integers t.
+\end{theorem}
+
+\begin{proof}
+Let matrix A be similar to matrix B. Then there exists an invertible matrix S such that 
+
+\begin{align*}
+AS &= SB \\
+B &= S^{-1}AS
+\end{align*}
+
+When we simplify the expression for $B^{t}$, most of the $S^{-1}$ and $S$ terms cancel.
+
+\begin{align*}
+B^{t} &= (S^{-1}AS)^{t} \\
+&= (S^{-1}AS)(S^{-1}AS)\cdots(S^{-1}AS) \\
+&= S^{-1}A^{t}S
+\end{align*}
+
+Arriving at the equation $B^{t} = S^{-1}A^{t}S$, we have proven that $B^{t}$ is similar to $A^{t}$ for all positive integers t.
+
+\end{proof}
+
 \end{document}

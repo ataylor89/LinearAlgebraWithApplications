@@ -258,4 +258,39 @@ AS = SB\textrm{, or }B = S^{-1}AS
 
 \end{definition}
 
+\begin{problem}
+Is matrix $A = \begin{bmatrix}1 & 2 \\ 4 & 3 \end{bmatrix}$ similar to $B = \begin{bmatrix}5 & 0 \\ 0 & -1 \end{bmatrix}$?
+\end{problem}
+
+\begin{solution}
+We're looking for a matrix $S = \begin{bmatrix} x & y \\ z & t \end{bmatrix}$ such that
+
+\begin{align*}
+\begin{bmatrix}x + 2z & y + 2t \\ 4x + 3z & 4y + 3t\end{bmatrix} = \begin{bmatrix}5x & -y \\ 5z & -t\end{bmatrix}
+\end{align*}
+
+By inspection we see that $z = 2x$ and $t = -y$. Therefore
+
+\begin{align*}
+S = \begin{bmatrix} x & y \\ 2x & -y \end{bmatrix} 
+\end{align*}
+
+Now let's look at the determinant of S.
+
+\begin{align*}
+det(S) = -3xy
+\end{align*}
+
+The matrix S is invertible when $x \neq 0$ and $y \neq 0$. Thus 
+
+\begin{align*}
+S = \begin{bmatrix} x & y \\ 2x & -y \end{bmatrix} 
+\end{align*}
+
+where $x \neq 0$ and $y \neq 0$. \\
+
+We have found invertible matrices S such that $AS = SB$, so we know that matrix A is similar to matrix B. 
+
+\end{solution}
+
 \end{document}

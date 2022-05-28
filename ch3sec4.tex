@@ -317,4 +317,55 @@ Arriving at the equation $B^{t} = S^{-1}A^{t}S$, we have proven that $B^{t}$ is 
 
 \end{proof}
 
+\begin{definition}
+A diagonal matrix has the form
+
+\begin{align*}
+\begin{bmatrix}
+c_{1} & 0 & 0 & \cdots & 0 \\
+0 & c_{2} & 0 & \cdots & 0 \\
+0 & 0 & c_{3} & \cdots & 0 \\
+\vdots \\
+0 & 0 & 0 & \cdots & c_{n}
+\end{bmatrix}
+\end{align*}
+
+where $c_{i} \neq 0$ for all $1 \leq i \leq n$
+\end{definition}
+
+\begin{problem}
+Let T be a linear transformation $T(\vec{x}) = A\vec{x}$ from $\mathbb{R}^n$ to $\mathbb{R}^n$. Let $\mathfrak{B} = (\vec{v_{1}}, \vec{v_{2}}, \ldots, \vec{v_{n}})$ be a basis for $\mathbb{R}^n$. When is the $\mathfrak{B}$-matrix B of T diagonal?
+\end{problem}
+
+\begin{solution}
+The $\mathfrak{B}$-matrix of T is diagonal when 
+
+\begin{align*}
+T(v_{i}) = c_{i}v_{i} 
+\end{align*} 
+
+for some constant $c_{i} \neq 0$ for all $1 \leq i \leq n$. \\
+
+This follows from the fact that
+
+\begin{align*}
+\Coord{T(x)}{B} &= B \Coord{x}{B} \\
+&= \begin{pmatrix} \Coord{T(v_{1})}{B} & \Coord{T(v_{2})}{B} & \Coord{T(v_{3})}{B} \cdots \Coord{T(v_{n})}{B} \end{pmatrix} \Coord{x}{B} \\
+\end{align*}
+
+When $T(v_{i}) = c_{i}v_{i}$ the matrix B is diagonal. 
+
+\begin{align*}
+\Coord{T(x)}{B} &=
+\begin{bmatrix}
+c_{1} & 0 & 0 & \cdots & 0 \\
+0 & c_{2} & 0 & \cdots & 0 \\
+0 & 0 & c_{3} & \cdots & 0 \\
+\vdots \\
+0 & 0 & 0 & \cdots & c_{n}
+\end{bmatrix} \Coord{x}{B} 
+\end{align*}
+
+\end{solution}
+
 \end{document}
